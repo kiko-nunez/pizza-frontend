@@ -5,6 +5,7 @@ function Nav (props) {
         <nav className="nav">
             <Link to="/">
                 <div>CheeZus</div>
+                <div>PIZZA</div>
             </Link>
         </nav>
     );
