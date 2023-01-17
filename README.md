@@ -28,10 +28,10 @@ CheesUs is a food delivery app specifically designed to give customers a list of
 ![production](https://i.imgur.com/ckLPBCK.png)
 ***
 ## Deployed Website
-[lets go find that job...](https://project2forgeneralassembly.herokuapp.com/) to visit deployed app! 
+[lets go find that job...](https://project2forgeneralassembly.herokuapp.com/forgotten) to visit deployed app! 
 ***
 ## Future Enhancements
-- Adding a feature that allows users to create a 'Looking for work' post
-- Adding a feature that allows a users to comment on others project photos
-- Adding a feature that allows a user to save and search jobs postings based zip
-- Adding a feature that allows a user to save other users profiles and interact via notes
+- Adding a feature that allows users to submit an order for delivery.
+- Adding a feature that allows users delivery ticket to be sent to shop for processing.
+- Adding a feature that allows a user search pizza shops based zip code.
+- Adding a feature that allows a users previous orders to be saved in users order history
