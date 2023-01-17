@@ -2,12 +2,25 @@ import { Link } from 'react-router-dom';
 
 function Nav (props) {
     return (
-        <nav className="nav">
+        <>
+        <div className="nav">
             <Link to="/">
                 <div>CheeZus</div>
-                <div>PIZZA</div>
             </Link>
-        </nav>
+            <Link to="Cart">
+                <div>Cart</div>
+                </Link>
+                <Link to="Login">
+                    <div>Login</div>
+                </Link>
+                <Link to="Checkout">
+                    <div>Checkout</div>
+                </Link>
+                <Link to="Shop">
+                    <div>Shop</div>
+                </Link>
+        </div>
+        </>
     );
 }
 
