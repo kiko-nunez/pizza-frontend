@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 function Nav (props) {
@@ -23,5 +24,7 @@ function Nav (props) {
         </>
     );
 }
+=======
+>>>>>>> 1fed059a3dea80f2616ed310a5fc0270294fbd3b
 
 export default Nav;
