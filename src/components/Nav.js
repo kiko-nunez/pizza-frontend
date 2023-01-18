@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { logIn, logOut } from '../firebase'
+
 
 function Nav (props) {
     return (
