@@ -5,7 +5,7 @@ import Login from './pages/Login';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
 import Shop from './pages/Shop'
-import Nav from './components/Nav'
+import Navbar from './components/Nav';
 
 
 
@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
   <Router>
+    <Navbar />
     <Routes>
       <Route exact path="/" element={<Main />} />
       <Route path= "/Cart" element={<Cart />} />
