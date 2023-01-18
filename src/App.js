@@ -1,7 +1,7 @@
 import './App.css';
 import {Route, Routes, BrowserRouter as Router} from "react-router-dom"
 import Main from './pages/Main'
-import Login from './pages/login';
+import Login from './pages/Login';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
 import Shop from './pages/Shop'
