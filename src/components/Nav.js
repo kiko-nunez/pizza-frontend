@@ -2,6 +2,11 @@ import React from 'react'
 import {Link} from "react-router-dom"
 import Images from "../images/Cheezus.png"
 
+import { Link } from 'react-router-dom';
+import { logIn, logOut } from '../firebase'
+
+
+
  const Navbar = () => {
     return (<nav className='nav'>
         <a href='/' className='site-title'> Cheezus </a>
