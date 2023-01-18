@@ -1,27 +1,25 @@
-import { Link } from 'react-router-dom';
+import React from 'react'
+import {Link} from "react-router-dom"
+import Images from "../images/Cheezus.png"
 
-function Nav (props) {
-    return (
-        <>
-        <div className="nav">
-            <Link to="/">
-                <div>CheeZus</div>
-            </Link>
-            <Link to="Cart">
-                <div>Cart</div>
-                </Link>
-                <Link to="Login">
-                    <div>Login</div>
-                </Link>
-                <Link to="Checkout">
-                    <div>Checkout</div>
-                </Link>
-                <Link to="Shop">
-                    <div>Shop</div>
-                </Link>
-        </div>
-        </>
-    );
+ const Navbar = () => {
+    return (<nav className='nav'>
+        <a href='/' className='site-title'> Cheezus </a>
+  <img src={Images}/>
+        <ul>
+            <li>
+                <a href="/Login"> Login</a>
+            </li>
+            <li>
+                <a href="/Cart"> Cart</a>
+            </li>
+            <li>
+                <a href="/Shop"> Shop</a>
+                </li>
+                <li>
+                <a href="/Checkout"> Checkout</a>
+                </li>
+        </ul>
+    </nav>)
 }
-
-export default Nav;
+export default Navbar;
