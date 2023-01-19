@@ -51,4 +51,25 @@ background-color: blueviolet;
     display:flex ;
     align-items: center;
     padding: .25rem;
+<<<<<<< HEAD
+    height: 80px;
 }
+
+.storeInfo {
+    display:flex;
+    flex-direction: column;
+    gap: 5rem;
+    border: 10px;
+
+
+}
+
+.store {
+    border:5px solid rgb(150, 147, 143);
+
+
+}
+.img{
+    height: 70px;
+    align-items: initial;
+
