@@ -1,3 +1,4 @@
+
 import React from "react";
 import {Link} from "react-router-dom";
 import Images from "../images/Cheezus.png"
@@ -6,11 +7,12 @@ import Images from "../images/Cheezus.png"
 
 
 
+
  const Navbar = () => {
     return (<nav className='nav'>
         <img src={Images}/>
         <a href='/' className='site-title'> Cheezus </a>
-  
+
         <ul>
             <li>
                 <a href="/Login"> Login</a>
@@ -27,4 +29,6 @@ import Images from "../images/Cheezus.png"
         </ul>
     </nav>)
 }
+
 export default Navbar;
+
