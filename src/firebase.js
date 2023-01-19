@@ -1,4 +1,6 @@
-import { initializeApp } from  'firebase/app'
+
+/*import { initializeApp } from  'firebase/app'
+
 import { GoogleAuthProvider, signInWithPopup, getAuth, signOut } from 'firebase/auth'
 import { logIn, logOut } from '../firebase'
 import { Link } from 'react-router-dom'
@@ -31,4 +33,5 @@ export function logIn () {
 }
 export function logOut () {
     return signOut(auth)
-}
+} */
+
