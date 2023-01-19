@@ -1,16 +1,10 @@
 import './App.css';
 import {Route, Routes, BrowserRouter as Router} from "react-router-dom"
-import Main from './pages/Main'
-import Login from './pages/Login';
+import Register from './pages/Register';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
-import Shop from './pages/Shop'
 import Navbar from './components/Nav';
-
-
-
-
-
+import Shops from './pages/Shops';
 
 
 function App() {
@@ -19,11 +13,12 @@ function App() {
   <Router>
     <Navbar />
     <Routes>
-      <Route exact path="/" element={<Main />} />
+      <Route exact path="/" element={<Shops />} />
       <Route path= "/Cart" element={<Cart />} />
       <Route path= "Checkout" element={<Checkout />} />
-      <Route path= "Login" element={<Login />} />
-      <Route path= "Shop" element={<Shop />} />
+      <Route path= "Login" element={<Register />} />
+      <Route path= "Shop" element={<Shops />} />
+
     </Routes>
   </Router>
     </div>
