@@ -1,4 +1,3 @@
-
 import React from "react";
 import {Link} from "react-router-dom";
 import Images from "../images/Cheezus.png"
@@ -8,27 +7,30 @@ import Images from "../images/Cheezus.png"
 
 
 
- const Navbar = () => {
-    return (<nav className='nav'>
-        <img src={Images} alt="logo"/>
-        <a href='/' className='site-title'> Cheezus </a>
+ const Nav = () => {
+    return (
+    
+    <nav className='nav'>
 
-        <ul>
-            <li>
-                <a href="/Login"> Login/Register</a>
-            </li>
-            <li>
-                <a href="/Cart"> Cart</a>
-            </li>
-            <li>
-                <a href="/Shops"> Shop</a>
-                </li>
-                <li>
-                <a href="/Checkout"> Checkout</a>
-                </li>
-        </ul>
-    </nav>)
+        <img src={Images} alt="logo"/>
+        <div className="nav">
+                <Link to="/">
+                    <div>CheeZus</div>
+                </Link>
+                <Link to="/">
+                    <div>Login</div>
+                </Link>
+                <Link to="/shops">
+                    <div>Shops</div>
+                </Link>
+                <Link to="/menu">
+                    <div>Menu</div>
+                </Link>
+
+        </div>
+    </nav>
+    )
 }
 
-export default Navbar;
+export default Nav;
 
