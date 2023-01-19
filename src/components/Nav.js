@@ -1,26 +1,27 @@
-import React from 'react'
-import {Link} from "react-router-dom"
+
+import React from "react";
+import {Link} from "react-router-dom";
 import Images from "../images/Cheezus.png"
 
-//import { Link } from 'react-router-dom';
 //import { logIn, logOut } from '../firebase'
+
 
 
 
  const Navbar = () => {
     return (<nav className='nav'>
-        <img src={Images}/>
+        <img src={Images} alt="logo"/>
         <a href='/' className='site-title'> Cheezus </a>
-  
+
         <ul>
             <li>
-                <a href="/Login"> Login</a>
+                <a href="/Login"> Login/Register</a>
             </li>
             <li>
                 <a href="/Cart"> Cart</a>
             </li>
             <li>
-                <a href="/Shop"> Shop</a>
+                <a href="/Shops"> Shop</a>
                 </li>
                 <li>
                 <a href="/Checkout"> Checkout</a>
@@ -28,4 +29,6 @@ import Images from "../images/Cheezus.png"
         </ul>
     </nav>)
 }
+
 export default Navbar;
+
