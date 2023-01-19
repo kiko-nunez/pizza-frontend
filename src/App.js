@@ -1,7 +1,7 @@
 import './App.css';
 import {Route, Routes, BrowserRouter as Router} from "react-router-dom"
 import Main from './pages/Main'
-import Login from './pages/Login';
+import Register from './pages/Register';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
 import Shop from './pages/Shop'
@@ -22,7 +22,7 @@ function App() {
       <Route exact path="/" element={<Main />} />
       <Route path= "/Cart" element={<Cart />} />
       <Route path= "Checkout" element={<Checkout />} />
-      <Route path= "Login" element={<Login />} />
+      <Route path= "Login" element={<Register />} />
       <Route path= "Shop" element={<Shop />} />
     </Routes>
   </Router>
