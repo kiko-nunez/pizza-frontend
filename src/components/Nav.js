@@ -23,9 +23,10 @@ import Images from "../images/Cheezus.png"
                 <Link to="/shops">
                     <div>Shops</div>
                 </Link>
-                <Link to="/menus">
+                <Link to="/menu">
                     <div>Menu</div>
                 </Link>
+
         </div>
     </nav>
     )
