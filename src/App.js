@@ -1,26 +1,13 @@
 import './App.css';
-import {Route, Routes, BrowserRouter as Router} from "react-router-dom"
-import Register from './pages/Register';
-import Checkout from './pages/Checkout';
-import Cart from './pages/Cart';
-import Navbar from './components/Nav';
-import Shops from './pages/Shops';
+import Nav from './components/Nav';
+import Main from './components/Main';
 
 
 function App() {
   return (
-    <div className="App">
-  <Router>
-    <Navbar />
-    <Routes>
-      <Route exact path="/" element={<Shops />} />
-      <Route path= "/Cart" element={<Cart />} />
-      <Route path= "Checkout" element={<Checkout />} />
-      <Route path= "Login" element={<Register />} />
-      <Route path= "Shop" element={<Shops />} />
-
-    </Routes>
-  </Router>
+    <div className='app'>
+      <Nav />
+      <Main />
     </div>
   );
 }
