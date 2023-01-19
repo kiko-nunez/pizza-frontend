@@ -28,7 +28,7 @@ const Register = (props) => {
   return (
 <div>
 <h1>Register User</h1>
-<form>
+<form onSubmit={handleSubmit}>
 Name: <input
 type="text"
 name="name"

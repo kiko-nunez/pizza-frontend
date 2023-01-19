@@ -4,13 +4,8 @@ import Main from './pages/Main'
 import Register from './pages/Register';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
-import Shop from './pages/Shop'
 import Navbar from './components/Nav';
-
-
-
-
-
+import Shops from './pages/Shops';
 
 
 function App() {
@@ -23,7 +18,7 @@ function App() {
       <Route path= "/Cart" element={<Cart />} />
       <Route path= "Checkout" element={<Checkout />} />
       <Route path= "Login" element={<Register />} />
-      <Route path= "Shop" element={<Shop />} />
+      <Route path= "Shop" element={<Shops />} />
     </Routes>
   </Router>
     </div>
