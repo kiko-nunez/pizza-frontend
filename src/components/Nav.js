@@ -21,7 +21,7 @@ import Images from "../images/Cheezus.png"
                 <a href="/Cart"> Cart</a>
             </li>
             <li>
-                <a href="/Shop"> Shop</a>
+                <a href="/Shops"> Shop</a>
                 </li>
                 <li>
                 <a href="/Checkout"> Checkout</a>

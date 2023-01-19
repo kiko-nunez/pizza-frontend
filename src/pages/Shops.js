@@ -1,7 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Nav'
 
-const Main = () => {
+const URL = 'https://cheesus.herokuapp.com/'
+
+const Shops = () => {
+  getShops = async () => {
+
+    const response =
+  }
+  
   return (
     <>
     <div className="storeInfo">
@@ -16,4 +23,4 @@ const Main = () => {
  )
 }
 
-export default Main
+export default Shops
