@@ -66,4 +66,10 @@ background-color: blueviolet;
 .store {
     border:5px solid rgb(150, 147, 143);
 
+
+}
+.img{
+    height: 70px;
+    align-items: initial;
+
 }
