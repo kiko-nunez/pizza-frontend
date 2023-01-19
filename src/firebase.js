@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 // import { initializeApp } from  'firebase/app'
 // import { GoogleAuthProvider, signInWithPopup, getAuth, signOut } from 'firebase/auth'
 // import { logIn, logOut } from '../firebase'
 // import { Link } from 'react-router-dom'
+=======
+
+/*import { initializeApp } from  'firebase/app'
+
+import { GoogleAuthProvider, signInWithPopup, getAuth, signOut } from 'firebase/auth'
+import { logIn, logOut } from '../firebase'
+import { Link } from 'react-router-dom'
+>>>>>>> 7974f5a5a9ae7e09e2996ca9f2159d378f08fd0d
 
 
 
@@ -25,6 +34,7 @@
 // // Get current auth instance
 // export const auth = getAuth(app)
 
+<<<<<<< HEAD
 // // setting up authentication function
 // export function logIn () {
 //     return signInWithPopup(auth, provider)
@@ -32,3 +42,13 @@
 // export function logOut () {
 //     return signOut(auth)
 // }
+=======
+// setting up authentication function
+export function logIn () {
+    return signInWithPopup(auth, provider)
+}
+export function logOut () {
+    return signOut(auth)
+} */
+
+>>>>>>> 7974f5a5a9ae7e09e2996ca9f2159d378f08fd0d
