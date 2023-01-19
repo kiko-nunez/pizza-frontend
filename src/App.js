@@ -3,13 +3,8 @@ import {Route, Routes, BrowserRouter as Router} from "react-router-dom"
 import Register from './pages/Register';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
-import Shops from './pages/Shops'
 import Navbar from './components/Nav';
-
-
-
-
-
+import Shops from './pages/Shops';
 
 
 function App() {
@@ -22,6 +17,8 @@ function App() {
       <Route path= "/Cart" element={<Cart />} />
       <Route path= "Checkout" element={<Checkout />} />
       <Route path= "Login" element={<Register />} />
+      <Route path= "Shop" element={<Shops />} />
+
     </Routes>
   </Router>
     </div>
