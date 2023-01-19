@@ -11,7 +11,6 @@ import { logIn, logOut } from '../firebase'
     return (
     
     <nav className='nav'>
-
         <img src={Images} alt="logo"/>
         <div className="nav">
                 <Link to="/">
