@@ -2,8 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import Images from "../images/Cheezus.png"
 
-//import { logIn, logOut } from '../firebase'
-
+import { Link } from 'react-router-dom';
+import { logIn, logOut } from '../firebase'
 
 
 
