@@ -1,27 +1,8 @@
-
-// import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 // import Navbar from '../components/Nav'
 
 
 function Shops (props) {
-console.log(props);
-
-const Shops = () => {
-  const [shops, setShops] = useState()
-
-  const URL = 'https://cheesus.herokuapp.com/'
-
-
-  const getShops = async () => {
-
-    const response = await fetch(URL, {
-      method: 'GET'
-    })
-    const data = await response.json()
-    setShops(data)
-  }
-  
 
   const loaded = () => {
     return props.shops.map(shop => (
@@ -45,10 +26,6 @@ const loading = () => {
    {props.shops ? loaded() : loading()}
     </section>
    
-
  )}
-
-  }
-
 
 export default Shops;
