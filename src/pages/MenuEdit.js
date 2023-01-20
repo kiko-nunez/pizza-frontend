@@ -80,7 +80,7 @@ function MenuEdit(props) {
 
     const handleDelete = () => {
         props.deleteMenu(id);
-        navigate('/shops');
+        navigate('/menu');
     };
 
     return (
