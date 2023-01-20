@@ -73,3 +73,24 @@ background-color: blueviolet;
     align-items: initial;
 
 }
+
+.shops {
+    display: flex;
+    justify-content: flex-start;
+    border: solid;
+    border-width: 10px;
+    border-color: black;
+}
+
+.shoplogo {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 200px;
+}
+
+.shopInfo {
+    margin-left: 15px;
+    margin-top: 15px;
+    text-align: start;
+}
