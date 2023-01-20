@@ -73,8 +73,12 @@ const Main = () => {
 
       // MENU Call
 
-      const MENU_URL = "http://localhost:4000/menu/" 
-      // const MENU_URL = "https://cheesus.herokuapp.com/menu" 
+
+      //const MENU_URL = "http://localhost:4000/menu/" 
+      const MENU_URL = "https://cheesus.herokuapp.com/menu" 
+
+    
+
   
       const [ menu, setMenu ] = useState(null);
       const getMenu = async () => {
