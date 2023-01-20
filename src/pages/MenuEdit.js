@@ -42,6 +42,7 @@ function MenuEdit(props) {
         return (
             <div className="menuItem">
                 <h1>{menus.item}</h1>
+                <img src={menus.image} alt={menus.name}/>
                 <h3>{menus.description}</h3>
                 <h2>{menus.price}</h2>
 
@@ -52,6 +53,13 @@ function MenuEdit(props) {
                         value={editForm.item} 
                         onChange={handleChange}
                         placeholder="Item Name"
+                    />
+                    <input 
+                        type="text" 
+                        name="description" 
+                        value={editForm.image} 
+                        onChange={handleChange}
+                        placeholder="Item Image"
                     />
                     <input 
                         type="text" 
