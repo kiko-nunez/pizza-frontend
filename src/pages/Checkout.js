@@ -1,6 +1,11 @@
 import React from 'react';
 
 function Checkout(props) {
+
+  const pay = () => {
+    alert("In CheeZus we trust");
+  }
+
   return (
     <div className="checkout">
       <h1>Checkout</h1>
@@ -36,7 +41,7 @@ function Checkout(props) {
       
       </form>
 
-      <button onClick={alert}> Place Order
+      <button onClick={pay}> Place Order
       </button>
     </div>
   );
