@@ -48,8 +48,7 @@ const loading = () => {
 
  )}
 
- )
   }
 
 
-export default Shops
+export default Shops;
