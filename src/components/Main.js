@@ -11,7 +11,7 @@ const Main = () => {
     const [shops, setShops] = useState(null)
   
     // const URL = 'http://localhost:4000/shop'
-    const URL = 'http://cheesus.herokuapp.com/shop'
+    const URL = 'https://cheesus.herokuapp.com/shop'
   
   
     const getShops = async () => {
@@ -28,7 +28,9 @@ const Main = () => {
 
       // MENU Call
 
-      const MENU_URL = "http://localhost:4000/menu" // https://cheesus.herokuapp.com/menu
+      const MENU_URL = "https://cheesus.herokuapp.com/menu"
+
+      //"http://localhost:4000/menu"
   
       const [ menu, setMenu ] = useState(null);
       const getMenu = async () => {
