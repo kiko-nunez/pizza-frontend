@@ -2,28 +2,27 @@ import React from "react";
 import {Link} from "react-router-dom";
 import Images from "../images/Cheezus.png"
 
-import { Link } from 'react-router-dom';
-import { logIn, logOut } from '../firebase'
-
 
 
  const Nav = () => {
     return (
     
     <nav className='nav'>
-        <img src={Images} alt="logo"/>
+        <Link to="/">
+            <img src={Images} alt="logo"/>
+        </Link>
         <div className="nav">
-                <Link to="/">
-                    <div>CheeZus</div>
-                </Link>
                 <Link to="/">
                     <div>Login</div>
                 </Link>
                 <Link to="/shops">
                     <div>Shops</div>
                 </Link>
-                <Link to="/menu">
-                    <div>Menu</div>
+                <Link to="/cart">
+                    <div>Cart</div>
+                </Link>
+                <Link to="/checkout">
+                    <div>Checkout</div>
                 </Link>
 
         </div>
