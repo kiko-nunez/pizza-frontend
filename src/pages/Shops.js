@@ -7,12 +7,13 @@ function Shops (props) {
   const loaded = () => {
     return props.shops.map(shop => (
       <div key={shop._id}>
-        <Link to={`/cart`}>
-          <h1>Name: {shop.shop_name} </h1>
-          <img src={shop.img} alt={shop.shop_name}/>
+        <Link to={`/menu`}>
+          <h1>{shop.name} </h1>
+        </Link>
+          <img src={shop.image} alt={shop.name}/>
           <h2>{shop.phone}</h2>
           <h2>{shop.address}</h2>
-        </Link>
+        
       </div>
     ))
   }

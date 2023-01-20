@@ -18,7 +18,7 @@ const Main = () => {
   
       const response = await fetch(URL)
       const data = await response.json()
-      console.log(data);
+      // console.log(data);
       setShops(data)
     }
 
@@ -26,27 +26,74 @@ const Main = () => {
         getShops()
       }, [])
 
+      // USER Call
+      const USER_URL = "http://localhost:4000/user/" 
+      // const USER_URL = "https://cheesus.herokuapp.com/user/" 
+  
+      const [ user, setUser ] = useState(null);
+
+      const getUser = async () => {
+        const resU = await fetch(USER_URL);
+        const dU = await resU.json();
+        setUser(dU);
+      }
+    
+      const createUser = async (users) => {
+        await fetch(USER_URL, {
+          method: "POST",
+          headers: {
+            "Content-type": "Application/json",
+          },
+          body: JSON.stringify(users),
+        });
+        getUser();
+      };
+    
+      const updateUser = async (id, updatedUsers) => {
+        await fetch(USER_URL + id, {
+          method: "PUT",
+          headers: {
+            "Content-type": "Application/json",
+          },
+          body: JSON.stringify(updatedUsers),
+        });
+        getUser();
+      };
+    
+      const deleteUser = async (id) => {
+        await fetch(USER_URL + id, {
+          method: "DELETE",
+        });
+        getUser();
+      };
+    
+      useEffect(() => { 
+        getUser();
+      }, []);
+
       // MENU Call
 
-      const MENU_URL = "https://cheesus.herokuapp.com/menu"
 
-      //"http://localhost:4000/menu"
+      //const MENU_URL = "http://localhost:4000/menu/" 
+      const MENU_URL = "https://cheesus.herokuapp.com/menu" 
+
+    
+
   
       const [ menu, setMenu ] = useState(null);
       const getMenu = async () => {
-    
         const res = await fetch(MENU_URL);
         const d = await res.json();
         setMenu(d);
       }
     
-      const createMenu = async (menu) => {
+      const createMenu = async (menus) => {
         await fetch(MENU_URL, {
           method: "POST",
           headers: {
             "Content-type": "Application/json",
           },
-          body: JSON.stringify(menu),
+          body: JSON.stringify(menus),
         });
         getMenu();
       };
@@ -78,16 +125,25 @@ const Main = () => {
 
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Register/>} />
+        <Route exact path="/" element={<Register 
+                                        user={user}
+                                        createUser={createUser}
+                                      />} 
+        />
         <Route path= "/cart" element={<Cart />} />
         <Route path= "/checkout" element={<Checkout />} />
-        <Route path= "/login" element={<Register />} />
+        <Route path= "/:id" element={<Register 
+                                        user={user}
+                                        deleteUser={deleteUser}
+                                        updateUser={updateUser}
+                                      />} 
+        />
         <Route path= "/shops" element={<Shops shops={shops} />} />
         <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu}/>}/>
         <Route path="/menu/:id" element={<MenuEdit
-         menu={menu}
-         deleteMenu={deleteMenu}
-         updateMenu={updateMenu}
+                                                menu={menu}
+                                                deleteMenu={deleteMenu}
+                                                updateMenu={updateMenu}
          />}/>
   
       </Routes>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function MenuShow(props) {
     const formFields = {
@@ -25,7 +26,10 @@ function MenuShow(props) {
     const loaded = () => {
         return props.menu.map(menus => (
             <div key={menus._id} className="menuItem">
+                <Link to={`/menu/${menus._id}`}>
                     <h1>{menus.item}</h1>
+                </Link>
+                <img src={menus.image} alt={menus.name}/>
                     <h3>{menus.description}</h3>
                     <h2>{menus.price}</h2>
             </div>
@@ -46,6 +50,13 @@ function MenuShow(props) {
                     placeholder="Item Name"
                     value={newForm.item} 
                 />
+                    <input 
+                        type="text" 
+                        name="image" 
+                        onChange={handleChange}
+                        placeholder="Item Image"
+                        value={newForm.image} 
+                    />
                 <input 
                     type="text" 
                     name="description" 
