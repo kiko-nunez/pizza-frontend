@@ -28,7 +28,7 @@ function Register(props) {
   return (
     <>
     <div className='regcontainer'>
-      <div className='registerdiv'>
+      <div className='registerForm'>
         <h1>Register User</h1>
             <form onSubmit={handleSubmit} className="regform">
             Name: 
@@ -59,7 +59,7 @@ function Register(props) {
             </form>
             {/* { props.people ? loaded() : loading() } */}
       </div>
-      <div className='animationText'>
+      <div className='animation'>
         <div className='parent'>
           <img src={Slice} alt="slice" className='leftside' id="sliceleft"/>
           <img src={Cheese} alt="cheese" className='rightside' id="cheeseright"/>

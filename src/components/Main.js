@@ -136,7 +136,7 @@ const Main = () => {
         />
         <Route path= "/cart" element={<Cart />} />
         <Route path= "/checkout" element={<Checkout />} />
-        <Route path= "/:id" element={<Register user={user}/>}/>
+        {/* <Route path= "/:id" element={<Register user={user}/>}/> */}
         <Route path= "/shops" element={<Shops shops={shops} />} />
         <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu}/>}/>
         <Route path="/menu/:id" element={<MenuEdit

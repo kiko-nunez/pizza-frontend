@@ -1,6 +1,15 @@
 * {
     box-sizing: border-box;
 }
+/* html {
+  cursor: url(https://i.imgur.com/u8xtUhp.png), auto;
+} */
+
+a
+{
+    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
 body {
    margin: 0; 
 }
@@ -40,7 +49,7 @@ nav a {
 }
 
 nav a:hover{
-  color:blueviolet;
+  color: black;
 }
 
 nav img {
@@ -52,6 +61,11 @@ nav img {
     padding: .25rem;
     height: 300px;
 }
+
+    /* Sticky Nav blocked on registration page */
+
+    /* :is(nav, #fakeId) {
+    } */
 
     /* STORE PAGE STYLING */
 
@@ -74,7 +88,7 @@ nav img {
     display: flex;
     justify-content: flex-start;
     border: solid;
-    border-width: thin;
+    border-width: 10px;
     border-color: black;
 }
 
@@ -88,20 +102,33 @@ nav img {
 .shopInfo {
     margin-left: 15px;
     margin-top: 15px;
-    text-align:left;
+    text-align: start;
 }
 
     /*   ANIMATION STYLING  */
 .regcontainer{
-  vertical-align: middle;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.registerdiv{
+.registerForm{
+  position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
-  max-width: 200px;
+  background-color: rgb(255, 165, 0, .8);
+  /* opacity: .8; */
+  border-radius: 5%;
+  width: 350px;
   align-content: center;
+  font-size: 25px;
 }
+
+.animation{
+  z-index: -1;
+}
+
 .regform {
   display: flex;
   flex-direction: column;
@@ -176,11 +203,11 @@ nav img {
   left: 30px;
   /* border: 1px solid #000000; */
 }
-
+/* 
 img {
     justify-content: center;
     width: 50%;
-    }
+    } */
 
  /* .menuItem {
     display: flex;
@@ -225,3 +252,4 @@ height: 100%;
     font-size: larger;
 
   }
+
