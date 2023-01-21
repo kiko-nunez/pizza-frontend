@@ -1,3 +1,8 @@
+/* IMPORTED FONTS FROM GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200&family=Kanit:wght@200;300&family=Noto+Sans:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chivo+Mono:wght@100;200&family=Kanit:wght@200;300&family=Noto+Sans:wght@200;300;400&display=swap');
+
+
 * {
     box-sizing: border-box;
 }
@@ -12,22 +17,20 @@ a
 
 body {
    margin: 0; 
+   font-family: 'Noto Sans', sans-serif;
 }
 
     /* NAV STYLING */
 nav {
     position: sticky;
     top: 0px;
-    border-bottom: 5px solid black;
-    align-items: center;
+    border-bottom: 20px solid black;
     background-color:orange;
-    color:white;
+    color:black;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     padding: 0 1rem;
-    gap:2 rem;
-    align-items: stretch;
 }
 @media
 (prefers-reduced-motion: no-preference) {
@@ -49,7 +52,8 @@ nav a {
 }
 
 nav a:hover{
-  color: black;
+  color: white;
+  text-shadow: white 1px 0 10px;
 }
 
 nav img {
@@ -62,10 +66,42 @@ nav img {
     height: 300px;
 }
 
-    /* Sticky Nav blocked on registration page */
+    /* Inputs Styling */
+input[type=text] {
+  background-color: rgb(255, 168, 5, .2);
+  color: black;
+  font-size: 20px;
+  width: 250px;
+  height: 55px;
+  border-radius: 10px;
+  transition: width 0.4s ease-in-out;
+}
 
-    /* :is(nav, #fakeId) {
-    } */
+input::placeholder {
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  opacity: 0.5;
+  color: grey;
+}
+
+input[type=text]:focus {
+  border: 4px solid rgb(255, 153, 0);
+  background-color: rgb(223,56,33, .1);
+  width: 100%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: orange;
+  border-radius: 10px;
+  border: none;
+  font-size: 30px;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 
     /* STORE PAGE STYLING */
 
@@ -111,19 +147,30 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
 }
 .registerForm{
   position: absolute;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 165, 0, .8);
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid black;
   /* opacity: .8; */
-  border-radius: 5%;
+  border-radius: 10px;
   width: 350px;
-  align-content: center;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: white 1px 0 10px;
+  color: black;
   font-size: 25px;
+  padding-bottom: 50px;
 }
+
+/* .registerForm h1{
+  font-family: 'Anton', sans-serif;
+} */
 
 .animation{
   z-index: -1;

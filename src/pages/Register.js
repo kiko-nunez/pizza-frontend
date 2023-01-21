@@ -29,7 +29,7 @@ function Register(props) {
     <>
     <div className='regcontainer'>
       <div className='registerForm'>
-        <h1>Register User</h1>
+        <h3>Register User</h3>
             <form onSubmit={handleSubmit} className="regform">
             Name: 
                 <input
