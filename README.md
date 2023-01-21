@@ -33,7 +33,7 @@ CheesUs is a food delivery app specifically designed to give customers a list of
 ***
 ## Deployed Website
 
-[temp](https://project2forgeneralassembly.herokuapp.com/forgotten) to visit deployed app! 
+[temp](https://cheezus.netlify.app/) to visit deployed app! 
 ***
 ## Future Enhancements
 - Adding a feature that allows users to submit an order for delivery.
