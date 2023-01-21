@@ -6,14 +6,15 @@ function Shops (props) {
 
   const loaded = () => {
     return props.shops.map(shop => (
-      <div key={shop._id}>
+      <div className='shops' key={shop._id}>
         <Link to={`/menu`}>
-          <h1>{shop.name} </h1>
+          <img className='shoplogo' src={shop.image} alt={shop.name}/>
         </Link>
-          <img src={shop.image} alt={shop.name}/>
-          <h2>{shop.phone}</h2>
-          <h2>{shop.address}</h2>
-        
+        <div className='shopInfo'>
+          <h1> {shop.name} </h1>
+          <h3> {shop.phone} </h3>
+          <h3> {shop.address} </h3>
+          </div>
       </div>
     ))
   }
