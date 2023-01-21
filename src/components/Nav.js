@@ -7,6 +7,7 @@ import TransparentText from "../images/cheezus_logo.png"
     
     <nav>
         <Link to="/">
+            <img className="logoimg"src={Images} alt="logo"/>
             <div>Login</div>
         </Link>
         <Link to="/shops">
