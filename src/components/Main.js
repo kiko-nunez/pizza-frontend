@@ -11,7 +11,7 @@ const Main = () => {
     const [shops, setShops] = useState(null)
   
     // const URL = 'http://localhost:4000/shop'
-    const URL = 'https://cheesus.herokuapp.com/shop'
+    const URL = 'https://cheesus.herokuapp.com/shop/'
   
   
     const getShops = async () => {
