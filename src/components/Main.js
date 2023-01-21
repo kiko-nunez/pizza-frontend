@@ -27,8 +27,8 @@ const Main = () => {
       }, [])
 
       // USER Call
-      const USER_URL = "http://localhost:4000/user/" 
-      // const USER_URL = "https://cheesus.herokuapp.com/user/" 
+      // const USER_URL = "http://localhost:4000/user/" 
+      const USER_URL = "https://cheesus.herokuapp.com/user/" 
   
       const [ user, setUser ] = useState(null);
 
@@ -49,23 +49,27 @@ const Main = () => {
         getUser();
       };
     
-      const updateUser = async (id, updatedUsers) => {
-        await fetch(USER_URL + id, {
-          method: "PUT",
-          headers: {
-            "Content-type": "Application/json",
-          },
-          body: JSON.stringify(updatedUsers),
-        });
-        getUser();
-      };
-    
-      const deleteUser = async (id) => {
-        await fetch(USER_URL + id, {
-          method: "DELETE",
-        });
-        getUser();
-      };
+      // leaving this here for future enhancements
+      
+      // const updateUser = async (id, updatedUsers) => {
+        //   await fetch(USER_URL + id, {
+          //     method: "PUT",
+          //     headers: {
+            //       "Content-type": "Application/json",
+            //     },
+            //     body: JSON.stringify(updatedUsers),
+            //   });
+            //   getUser();
+            // };
+            
+      // leaving this here for future enhancements
+
+      // const deleteUser = async (id) => {
+      //   await fetch(USER_URL + id, {
+      //     method: "DELETE",
+      //   });
+      //   getUser();
+      // };
     
       useEffect(() => { 
         getUser();
@@ -75,7 +79,7 @@ const Main = () => {
 
 
       //const MENU_URL = "http://localhost:4000/menu/" 
-      const MENU_URL = "https://cheesus.herokuapp.com/menu" 
+      const MENU_URL = "https://cheesus.herokuapp.com/menu/" 
 
     
 
@@ -132,12 +136,7 @@ const Main = () => {
         />
         <Route path= "/cart" element={<Cart />} />
         <Route path= "/checkout" element={<Checkout />} />
-        <Route path= "/:id" element={<Register 
-                                        user={user}
-                                        deleteUser={deleteUser}
-                                        updateUser={updateUser}
-                                      />} 
-        />
+        <Route path= "/:id" element={<Register user={user}/>}/>
         <Route path= "/shops" element={<Shops shops={shops} />} />
         <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu}/>}/>
         <Route path="/menu/:id" element={<MenuEdit
