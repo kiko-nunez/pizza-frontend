@@ -9,7 +9,7 @@ import Images from "../images/Cheezus.png"
     
     <nav className='nav'>
         <Link to="/">
-            <img src={Images} alt="logo"/>
+            <img className="logoimg"src={Images} alt="logo"/>
         </Link>
         <div className="nav">
                 <Link to="/">
