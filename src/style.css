@@ -78,7 +78,7 @@ background-color: blueviolet;
     display: flex;
     justify-content: flex-start;
     border: solid;
-    border-width: 10px;
+    border-width: thin;
     border-color: black;
 }
 
@@ -92,5 +92,5 @@ background-color: blueviolet;
 .shopInfo {
     margin-left: 15px;
     margin-top: 15px;
-    text-align: start;
+    text-align:left;
 }
