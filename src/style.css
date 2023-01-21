@@ -4,74 +4,70 @@
 body {
    margin: 0; 
 }
-.nav{
+
+    /* NAV STYLING */
+nav {
+    position: sticky;
+    top: 0px;
+    border-bottom: 5px solid black;
+    align-items: center;
     background-color:orange;
     color:white;
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-around;
     align-items: center;
     padding: 0 1rem;
     gap:2 rem;
     align-items: stretch;
 }
-
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 .site-title {
     font-size: 2rem;
     
 }
-.nav ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    padding: .25rem;
+    font-size: 30px;
 }
-.nav a {
+
+nav a:hover{
+  color:blueviolet;
+}
+
+nav img {
     color: inherit;
     text-decoration: none;
     height: 100%;
     display:flex ;
     align-items: center;
     padding: .25rem;
-
+    height: 300px;
 }
 
-.nav li.active{
-background-color: blueviolet;
-}
-
-.nav li-hover{
-    background-color: rgb(139, 105, 171);
-}
-
-.nav img {
-    color: inherit;
-    text-decoration: none;
-    height: 100%;
-    display:flex ;
-    align-items: center;
-    padding: .25rem;
-    height: 80px;
-}
+    /* STORE PAGE STYLING */
 
 .storeInfo {
     display:flex;
     flex-direction: column;
     gap: 5rem;
     border: 10px;
-
-
 }
 
 .store {
     border:5px solid rgb(150, 147, 143);
-
-
 }
 .image{
     height: 70px;
     align-items: initial;
-
 }
 
 .shops {
@@ -94,3 +90,138 @@ background-color: blueviolet;
     margin-top: 15px;
     text-align:left;
 }
+
+    /*   ANIMATION STYLING  */
+.regcontainer{
+  vertical-align: middle;
+}
+.registerdiv{
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+  max-width: 200px;
+  align-content: center;
+}
+.regform {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.leftside {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.rightside {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes Slide_Up {
+  0% {
+    transform: translateY(250px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bottom {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 Slide_Up;
+}
+
+/* animation images */
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#cheeseright {
+  position: relative;
+  top: 65px;
+  left: 0;
+  /* border: 1px solid #000000; */
+}
+
+#sliceleft {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  /* border: 1px solid #000000; */
+}
+#toppingbottom {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  /* border: 1px solid #000000; */
+}
+
+img {
+    justify-content: center;
+    width: 50%;
+    }
+
+ /* .menuItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+    width:50%;
+    align-content: center;
+    
+
+  }*/
+
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 5px;
+    border-color: rgb(203, 162, 17);
+    height: auto; 
+    width: auto; 
+    max-width: 900px; 
+    max-height: 900px;
+    border-radius: 10%;
+   
+  }
+
+  .foodie {
+    
+    border:10px;
+    width:50%;
+    height:50%;
+  }
+
+  .menudes {
+height: 100%;
+  }
+
+  .prices {
+    align-items: center;
+    font-size: larger;
+
+  }

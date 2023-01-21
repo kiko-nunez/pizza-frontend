@@ -29,9 +29,9 @@ function MenuShow(props) {
                 <Link to={`/menu/${menus._id}`}>
                     <h1>{menus.item}</h1>
                 </Link>
-                <img src={menus.image} alt={menus.name}/>
-                    <h3>{menus.description}</h3>
-                    <h2>{menus.price}</h2>
+                <img className="foodie" src={menus.image} alt={menus.name}/>
+                    <div className="menudes">{menus.description}</div>
+                    <div className="price">{menus.price}</div>
             </div>
         ));
     };
