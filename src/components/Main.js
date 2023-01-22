@@ -8,6 +8,7 @@ import MenuEdit from '../pages/MenuEdit';
 import MenuShow from '../pages/MenuShow';
 
 const Main = () => {
+
     const [shops, setShops] = useState(null)
   
     // const URL = 'http://localhost:4000/shop'
@@ -126,7 +127,6 @@ const Main = () => {
 
 
     return (
-
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Register 
@@ -134,7 +134,7 @@ const Main = () => {
                                         createUser={createUser}
                                       />} 
         />
-        <Route path= "/cart" element={<Cart />} />
+        <Route path= "/cart" element={<Cart menu={menu}/>} />
         <Route path= "/checkout" element={<Checkout />} />
         {/* <Route path= "/:id" element={<Register user={user}/>}/> */}
         <Route path= "/shops" element={<Shops shops={shops} />} />
