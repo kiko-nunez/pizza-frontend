@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from 'react-router';
 import {Link} from "react-router-dom";
-import TransparentText from "../images/cheezus_logo.png"
+import TransparentText from "../images/cheezus_logo-removebg-preview.png"
 
  const Nav = () => {
 

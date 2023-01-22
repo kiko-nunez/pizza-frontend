@@ -3,7 +3,7 @@ import React from 'react';
 function Checkout(props) {
 
   const pay = () => {
-    alert("In CheeZus we trust");
+    alert("In CheeZus we Crust");
   }
 
   return (

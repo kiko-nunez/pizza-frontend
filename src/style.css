@@ -274,7 +274,8 @@ button:hover {
 
     /*        MENU PAGE STYLING      */
 /* Style the button that is used to open and close the collapsible content */
-.btn {
+
+.btnnull {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -287,24 +288,7 @@ button:hover {
   content: '\02795';
   cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.btn:hover, .btnnull:hover {
-  background-color: orange;
-}
-/* content: '\02795';  Unicode character for "plus" sign (+) */
-/* content: "\2796";Unicode character for "minus" sign (-) */
-.btn:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: black;
-  float: right;
-  margin-left: 5px;
-}
-/* .content{
-  display: hidden;
-} */
-.btnnull {
+.btn {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -317,7 +301,22 @@ button:hover {
   content: "\2796";
   cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.btn:hover, .btnnull:hover {
+  background-color: orange;
+}
+/* content: '\02795';  Unicode character for "plus" sign (+) */
+/* content: "\2796";Unicode character for "minus" sign (-) */
+
 .btnnull:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+.btn:after {
   content: "\2796"; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: black;
@@ -327,7 +326,8 @@ button:hover {
 }
 
 /* Style the collapsible content. Note: hidden by default */
-.menuCreateFormnull {
+
+.menuCreateForm {
   display: inline;
   background-color: white;
   font-family: 'Noto Sans', sans-serif;
@@ -336,7 +336,7 @@ button:hover {
   font-size: 25px;
   padding-bottom: 50px;
 }
-.menuCreateForm {
+.menuCreateFormnull {
   display: none;
 }
 .menuItem {
@@ -390,9 +390,28 @@ button:hover {
   font-size: larger;
 }
 
-.cart {
-  /* background-image: url("https://i.imgur.com/wStwX1K.png"); */
-  background-repeat: no-repeat;
-  background-size: contain;
+            /* CART PAGE STYLING */
+.cartContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
+.cartList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  width:300px;
+}
+.line {
+  width: 300px;
+  height: 0;
+  border: 1px solid #100202;
+  margin: 3px;
+  display:inline-block;
+}
+.cartHeader{
+  display: flex;
+  flex-direction: column;
+}
