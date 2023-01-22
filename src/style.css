@@ -1,5 +1,4 @@
 /* IMPORTED FONTS FROM GOOGLE */
-@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200&family=Kanit:wght@200;300&family=Noto+Sans:wght@200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Chivo+Mono:wght@100;200&family=Kanit:wght@200;300&family=Noto+Sans:wght@200;300;400&display=swap');
 
 
@@ -74,7 +73,7 @@ input[type=text] {
   width: 250px;
   height: 55px;
   border-radius: 10px;
-  transition: width 0.4s ease-in-out;
+  /* transition: width 0.4s ease-in-out; */
 }
 
 input::placeholder {
@@ -87,10 +86,10 @@ input::placeholder {
 input[type=text]:focus {
   border: 4px solid rgb(255, 153, 0);
   background-color: rgb(223,56,33, .1);
-  width: 100%;
+  /* width: 100%; */
 }
 
-input[type=button], input[type=submit], input[type=reset] {
+input[type=button], input[type=submit], input[type=reset], button {
   background-color: orange;
   border-radius: 10px;
   border: none;
@@ -99,7 +98,14 @@ input[type=button], input[type=submit], input[type=reset] {
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
-  cursor: pointer;
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
+input[type=button]:hover, 
+input[type=submit]:hover, 
+input[type=reset]:hover, 
+button:hover {
+  background-color: rgb(246, 212, 150);
 }
 
 
@@ -252,68 +258,141 @@ input[type=button], input[type=submit], input[type=reset] {
   position: relative;
   top: 65px;
   left: 0;
-  /* border: 1px solid #000000; */
 }
 
 #sliceleft {
   position: absolute;
   top: 0;
   left: 20px;
-  /* border: 1px solid #000000; */
 }
 #toppingbottom {
   position: absolute;
   top: 100px;
   left: 30px;
-  /* border: 1px solid #000000; */
 }
-/* 
-img {
-    justify-content: center;
-    width: 50%;
-    } */
 
- /* .menuItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height:100%;
-    width:50%;
-    align-content: center;
-    
 
-  }*/
+    /*        MENU PAGE STYLING      */
+/* Style the button that is used to open and close the collapsible content */
+.btn {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  content: '\02795';
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
 
-  .menuItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid;
-    border-width: 5px;
-    border-color: rgb(203, 162, 17);
-    height: auto; 
-    width: auto; 
-    max-width: 900px; 
-    max-height: 900px;
-    border-radius: 10%;
-   
-  }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.btn:hover, .btnnull:hover {
+  background-color: orange;
+}
+/* content: '\02795';  Unicode character for "plus" sign (+) */
+/* content: "\2796";Unicode character for "minus" sign (-) */
+.btn:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+/* .content{
+  display: hidden;
+} */
+.btnnull {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  content: "\2796";
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+.btnnull:after {
+  content: "\2796"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
 
-  .foodie {
-    
-    border:10px;
-    width:50%;
-    height:50%;
-  }
+/* Style the collapsible content. Note: hidden by default */
+.menuCreateFormnull {
+  display: inline;
+  background-color: white;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: white 1px 0 10px;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+.menuCreateForm {
+  display: none;
+}
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-width: 5px;
+  border-color: rgb(203, 162, 17);
+  height: auto; 
+  width: auto; 
+  max-width: 900px; 
+  max-height: 900px;
+  border-radius: 10%;
+}
+.menuItemEdit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  width: auto; 
+  max-width: 900px; 
+  max-height: 900px;
+  border-radius: 10%;
+}
+.menuShowContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .menudes {
-height: 100%;
-  }
+.foodie {
+  border:10px;
+  width:50%;
+  height:50%;
+}
 
-  .prices {
-    align-items: center;
-    font-size: larger;
+.foodieEdit {
+  border:10px;
+  width:30%;
+  height:30%;
+}
 
-  }
+.menudes {
+  height: 100%;
+}
+
+.prices {
+  align-items: center;
+  font-size: larger;
+}
+
+.cart {
+  /* background-image: url("https://i.imgur.com/wStwX1K.png"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
