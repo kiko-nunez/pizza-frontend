@@ -4,7 +4,9 @@ import "../menustyles.css";
 
 function MenuShow(props) {
 
+
     // This section is for the collapsible create form
+
     // https://www.youtube.com/watch?v=xysDXNYWbKw&t=1s&ab_channel=WebStylePress
     const [btnState, setBtnState] = useState(false);
   
@@ -14,7 +16,9 @@ function MenuShow(props) {
 
   let toggleClassCheck = btnState ? ' active': null;
 
+
 // Code starts for form
+
     const formFields = {
         item: "",
         image: "",
