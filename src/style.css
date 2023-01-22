@@ -70,6 +70,8 @@ nav img {
     align-items: initial;
 }
 
+/* SHOP PAGE STYLING */
+
 .shops {
     display: flex;
     justify-content: flex-start;
@@ -89,6 +91,22 @@ nav img {
     margin-left: 15px;
     margin-top: 15px;
     text-align:left;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: medium;
+    font: bold;
+
+}
+
+.shopName {
+    font-size: xx-large;
+}
+.shopAddress {
+    color: rgb(146, 146, 146);
+    font-weight: bold;
+    font-size: medium;
 }
 
     /*   ANIMATION STYLING  */
