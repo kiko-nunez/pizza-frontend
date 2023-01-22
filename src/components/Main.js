@@ -125,6 +125,51 @@ const Main = () => {
       }, []);
 
 
+      // Cart Ajax Call
+      //const CART_URL = "http://localhost:4000/menu/" 
+      const CART_URL = "https://cheesus.herokuapp.com/cart/" 
+
+      const [ cart, setCart ] = useState(null);
+      const getCart = async () => {
+        const resCart = await fetch(CART_URL);
+        const dataCart = await resCart.json();
+        setCart(dataCart);
+      }
+    
+      const createCart = async (carts) => {
+        await fetch(CART_URL, {
+          method: "POST",
+          headers: {
+            "Content-type": "Application/json",
+          },
+          body: JSON.stringify(carts),
+        });
+        getCart();
+      };
+    
+      const updateCart = async (id, updatedCarts) => {
+        await fetch(CART_URL + id, {
+          method: "PUT",
+          headers: {
+            "Content-type": "Application/json",
+          },
+          body: JSON.stringify(updatedCarts),
+        });
+        getCart();
+      };
+    
+      const deleteCart = async (id) => {
+        await fetch(CART_URL + id, {
+          method: "DELETE",
+        });
+        getCart();
+      };
+    
+      useEffect(() => { 
+        getCart();
+      }, []);
+
+
     return (
 
     <div className="App">
@@ -134,11 +179,10 @@ const Main = () => {
                                         createUser={createUser}
                                       />} 
         />
-        <Route path= "/cart" element={<Cart />} />
+        <Route path= "/cart" element={<Cart cart={cart} deleteCart={deleteCart} updateCart={updateCart}/>} />
         <Route path= "/checkout" element={<Checkout />} />
-        {/* <Route path= "/:id" element={<Register user={user}/>}/> */}
         <Route path= "/shops" element={<Shops shops={shops} />} />
-        <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu}/>}/>
+        <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu} createCart={createCart}/>}/>
         <Route path="/menu/:id" element={<MenuEdit
                                                 menu={menu}
                                                 deleteMenu={deleteMenu}
@@ -148,6 +192,7 @@ const Main = () => {
       </Routes>
   
       </div>
-    )}
+    );
+}
 
     export default Main;
