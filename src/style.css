@@ -1,24 +1,36 @@
+/* IMPORTED FONTS FROM GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200&family=Kanit:wght@200;300&family=Noto+Sans:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chivo+Mono:wght@100;200&family=Kanit:wght@200;300&family=Noto+Sans:wght@200;300;400&display=swap');
+
+
 * {
     box-sizing: border-box;
 }
+/* html {
+  cursor: url(https://i.imgur.com/u8xtUhp.png), auto;
+} */
+
+a
+{
+    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
 body {
    margin: 0; 
+   font-family: 'Noto Sans', sans-serif;
 }
 
     /* NAV STYLING */
 nav {
     position: sticky;
     top: 0px;
-    border-bottom: 5px solid black;
-    align-items: center;
+    border-bottom: 20px solid black;
     background-color:orange;
-    color:white;
+    color:black;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     padding: 0 1rem;
-    gap:2 rem;
-    align-items: stretch;
 }
 @media
 (prefers-reduced-motion: no-preference) {
@@ -40,7 +52,8 @@ nav a {
 }
 
 nav a:hover{
-  color:blueviolet;
+  color: white;
+  text-shadow: white 1px 0 10px;
 }
 
 nav img {
@@ -52,6 +65,43 @@ nav img {
     padding: .25rem;
     height: 300px;
 }
+
+    /* Inputs Styling */
+input[type=text] {
+  background-color: rgb(255, 168, 5, .2);
+  color: black;
+  font-size: 20px;
+  width: 250px;
+  height: 55px;
+  border-radius: 10px;
+  transition: width 0.4s ease-in-out;
+}
+
+input::placeholder {
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  opacity: 0.5;
+  color: grey;
+}
+
+input[type=text]:focus {
+  border: 4px solid rgb(255, 153, 0);
+  background-color: rgb(223,56,33, .1);
+  width: 100%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: orange;
+  border-radius: 10px;
+  border: none;
+  font-size: 30px;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 
     /* STORE PAGE STYLING */
 
@@ -76,7 +126,7 @@ nav img {
     display: flex;
     justify-content: flex-start;
     border: solid;
-    border-width: thin;
+    border-width: 10px;
     border-color: black;
 }
 
@@ -97,7 +147,6 @@ nav img {
     list-style: none;
     font-size: medium;
     font: bold;
-
 }
 
 .shopName {
@@ -111,15 +160,39 @@ nav img {
 
     /*   ANIMATION STYLING  */
 .regcontainer{
-  vertical-align: middle;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
 }
-.registerdiv{
+.registerForm{
+  position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
-  max-width: 200px;
-  align-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid black;
+  /* opacity: .8; */
+  border-radius: 10px;
+  width: 350px;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: white 1px 0 10px;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 50px;
 }
+
+/* .registerForm h1{
+  font-family: 'Anton', sans-serif;
+} */
+
+.animation{
+  z-index: -1;
+}
+
 .regform {
   display: flex;
   flex-direction: column;
@@ -194,11 +267,11 @@ nav img {
   left: 30px;
   /* border: 1px solid #000000; */
 }
-
+/* 
 img {
     justify-content: center;
     width: 50%;
-    }
+    } */
 
  /* .menuItem {
     display: flex;
@@ -243,3 +316,4 @@ height: 100%;
     font-size: larger;
 
   }
+
