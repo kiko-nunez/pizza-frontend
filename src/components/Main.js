@@ -179,10 +179,10 @@ const Main = () => {
                                         createUser={createUser}
                                       />} 
         />
-        <Route path= "/cart" element={<Cart menu={menu}cart={cart} deleteCart={deleteCart} updateCart={updateCart}/>} />
+        <Route path= "/cart" element={<Cart menu={menu} cart={cart} deleteCart={deleteCart} updateCart={updateCart}/>} />
         <Route path= "/checkout" element={<Checkout />} />
         <Route path= "/shops" element={<Shops shops={shops} />} />
-        <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu} createCart={createCart}/>}/>
+        <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu} createCart={createCart} cart={cart}/>}/>
         <Route path="/menu/:id" element={<MenuEdit
                                                 menu={menu}
                                                 deleteMenu={deleteMenu}

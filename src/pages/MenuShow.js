@@ -4,6 +4,7 @@ import "../menustyles.css";
 
 function MenuShow(props) {
 
+    // This section is for the collapsible create form
     // https://www.youtube.com/watch?v=xysDXNYWbKw&t=1s&ab_channel=WebStylePress
     const [btnState, setBtnState] = useState(false);
   
@@ -13,8 +14,10 @@ function MenuShow(props) {
 
   let toggleClassCheck = btnState ? ' active': null;
 
+// Code starts for form
     const formFields = {
         item: "",
+        image: "",
         description: "",
         price: "",
     };
@@ -33,18 +36,30 @@ function MenuShow(props) {
         props.createMenu(newForm);
         setNewForm(formFields);
     };
+
+    // This Section is for the add to cart button
+
+    const cartAdd = (e) => {
+        e.preventDefault();
+        props.createCart();
+    };
     
     const loaded = () => {
-        return props.menu.map(menus => (
-            <div key={menus._id} className="menuItem">
-                <img className="foodie" src={menus.image} alt={menus.name}/>
-                <Link to={`/menu/${menus._id}`}>
-                    <h1>{menus.item}</h1>
-                </Link>
-                    <div className="menudes">{menus.description}</div>
-                    <div className="price">{menus.price}</div>
-                    <button>Add Item to Cart</button>
-            </div>
+        return props.menu.map(menus => (  
+            <form onSubmit={cartAdd}>   
+                <div key={menus._id} className="menuItem">
+                    <img className="foodie" src={menus.image} alt={menus.name}/>
+                    <Link to={`/menu/${menus._id}`}>
+                        <h1>{menus.item}</h1>
+                    </Link>
+                        <div className="menudes">{menus.description}</div>
+                        <div className="price">{menus.price}</div>
+                    <input type="hidden" name="menuItem" value={menus._id} />
+                    <Link to={'/cart'}>
+                    <input type="submit" value="Add Item to Cart" />
+                    </Link>
+                </div>
+            </form> 
         ));
     };
 
