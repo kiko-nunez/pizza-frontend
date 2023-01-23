@@ -8,10 +8,11 @@ import MenuEdit from '../pages/MenuEdit';
 import MenuShow from '../pages/MenuShow';
 
 const Main = () => {
+
     const [shops, setShops] = useState(null)
   
     // const URL = 'http://localhost:4000/shop'
-    const URL = 'https://cheesus.herokuapp.com/shop'
+    const URL = 'https://cheesus.herokuapp.com/shop/'
   
   
     const getShops = async () => {
@@ -27,8 +28,8 @@ const Main = () => {
       }, [])
 
       // USER Call
-      const USER_URL = "http://localhost:4000/user/" 
-      // const USER_URL = "https://cheesus.herokuapp.com/user/" 
+      // const USER_URL = "http://localhost:4000/user/" 
+      const USER_URL = "https://cheesus.herokuapp.com/user/" 
   
       const [ user, setUser ] = useState(null);
 
@@ -49,23 +50,27 @@ const Main = () => {
         getUser();
       };
     
-      const updateUser = async (id, updatedUsers) => {
-        await fetch(USER_URL + id, {
-          method: "PUT",
-          headers: {
-            "Content-type": "Application/json",
-          },
-          body: JSON.stringify(updatedUsers),
-        });
-        getUser();
-      };
-    
-      const deleteUser = async (id) => {
-        await fetch(USER_URL + id, {
-          method: "DELETE",
-        });
-        getUser();
-      };
+      // leaving this here for future enhancements
+      
+      // const updateUser = async (id, updatedUsers) => {
+        //   await fetch(USER_URL + id, {
+          //     method: "PUT",
+          //     headers: {
+            //       "Content-type": "Application/json",
+            //     },
+            //     body: JSON.stringify(updatedUsers),
+            //   });
+            //   getUser();
+            // };
+            
+      // leaving this here for future enhancements
+
+      // const deleteUser = async (id) => {
+      //   await fetch(USER_URL + id, {
+      //     method: "DELETE",
+      //   });
+      //   getUser();
+      // };
     
       useEffect(() => { 
         getUser();
@@ -75,7 +80,7 @@ const Main = () => {
 
 
       //const MENU_URL = "http://localhost:4000/menu/" 
-      const MENU_URL = "https://cheesus.herokuapp.com/menu" 
+      const MENU_URL = "https://cheesus.herokuapp.com/menu/" 
 
     
 
@@ -121,8 +126,53 @@ const Main = () => {
       }, []);
 
 
-    return (
 
+      // Cart Ajax Call
+      //const CART_URL = "http://localhost:4000/menu/" 
+      const CART_URL = "https://cheesus.herokuapp.com/cart/" 
+
+      const [ cart, setCart ] = useState(null);
+      const getCart = async () => {
+        const resCart = await fetch(CART_URL);
+        const dataCart = await resCart.json();
+        setCart(dataCart);
+      }
+    
+      const createCart = async (carts) => {
+        await fetch(CART_URL, {
+          method: "POST",
+          headers: {
+            "Content-type": "Application/json",
+          },
+          body: JSON.stringify(carts),
+        });
+        getCart();
+      };
+    
+      const updateCart = async (id, updatedCarts) => {
+        await fetch(CART_URL + id, {
+          method: "PUT",
+          headers: {
+            "Content-type": "Application/json",
+          },
+          body: JSON.stringify(updatedCarts),
+        });
+        getCart();
+      };
+    
+      const deleteCart = async (id) => {
+        await fetch(CART_URL + id, {
+          method: "DELETE",
+        });
+        getCart();
+      };
+    
+      useEffect(() => { 
+        getCart();
+      }, []);
+
+
+    return (
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Register 
@@ -130,16 +180,10 @@ const Main = () => {
                                         createUser={createUser}
                                       />} 
         />
-        <Route path= "/cart" element={<Cart />} />
+        <Route path= "/cart" element={<Cart menu={menu} cart={cart} deleteCart={deleteCart} updateCart={updateCart}/>} />
         <Route path= "/checkout" element={<Checkout />} />
-        <Route path= "/:id" element={<Register 
-                                        user={user}
-                                        deleteUser={deleteUser}
-                                        updateUser={updateUser}
-                                      />} 
-        />
         <Route path= "/shops" element={<Shops shops={shops} />} />
-        <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu}/>}/>
+        <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu} createCart={createCart} cart={cart}/>}/>
         <Route path="/menu/:id" element={<MenuEdit
                                                 menu={menu}
                                                 deleteMenu={deleteMenu}
@@ -149,6 +193,7 @@ const Main = () => {
       </Routes>
   
       </div>
-    )}
+    );
+}
 
     export default Main;

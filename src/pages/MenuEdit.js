@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
+
 // useParams is a hook that gives us access to the url params 
 // to allow us to find from the url params 
 
@@ -40,12 +41,10 @@ function MenuEdit(props) {
     // use the id to find the specific person in the people array to show person
     const loaded = () => {
         return (
-            <div className="menuItem">
-                <h1>{menus.item}</h1>
-                <img src={menus.image} alt={menus.name}/>
-                <h3>{menus.description}</h3>
-                <h2>{menus.price}</h2>
-
+            <div className="menuItemEdit">
+                <div className="itemDisplay">
+                    <h1 className="menuItem">{menus.item}</h1>
+                <div className="menuEditForm">
                 <form onSubmit={handleSubmit}>
                     <input 
                         type="text" 
@@ -77,7 +76,15 @@ function MenuEdit(props) {
                     />
                     <input type="submit" value="Edit Menu Item" />
                 </form>
+                    <img className="foodieEdit" src={menus.image} alt={menus.name}/>
+                    <h3 className="menudes">{menus.description}</h3>
+                    <h2 className="price">{menus.price}</h2>
+                </div>
                 <button onClick={handleDelete}>Delete This Item</button>
+                <Link to={`/menu`}>
+                    <button>Back to Menu</button>
+                </Link>
+                </div>
             </div>
         );
     };

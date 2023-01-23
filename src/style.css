@@ -131,16 +131,16 @@ button:hover {
 .shops {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     border: solid;
     border-width: 10px;
     border-color: black;
+    /* padding-left: 250px; */
 }
 
 .shoplogo {
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 200px;
+    height: 200px; 
+    width: 200px;
 }
 
 .shopInfo {
@@ -302,6 +302,21 @@ button:hover {
   cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
 
+  .menuItem {
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    border: solid;
+    border-width: 5px;
+    border-color: rgb(203, 162, 17);
+    max-width: 900px; 
+    max-height: 900px;
+    border-radius: 10%;
+  }
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .btn:hover, .btnnull:hover {
   background-color: orange;
@@ -416,7 +431,6 @@ button:hover {
   flex-direction: column;
 }
 
-
 /* Checkout */
 
 .payment {
@@ -447,3 +461,4 @@ button:hover {
     display: flex;
     justify-content: end;
   }
+
