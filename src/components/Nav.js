@@ -1,13 +1,16 @@
 import React from "react";
+import { useLocation } from 'react-router';
 import {Link} from "react-router-dom";
-import TransparentText from "../images/cheezus_logo.png"
+import TransparentText from "../images/cheezus_logo-removebg-preview.png"
 
  const Nav = () => {
+
+    const location = useLocation();
+
     return (
     
-    <nav>
+    <nav style={location.pathname === '/' ? { position: 'relative' } : null}>
         <Link to="/">
-            <img className="logoimg"src={Images} alt="logo"/>
             <div>Login</div>
         </Link>
         <Link to="/shops">

@@ -1,24 +1,35 @@
+/* IMPORTED FONTS FROM GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chivo+Mono:wght@100;200&family=Kanit:wght@200;300&family=Noto+Sans:wght@200;300;400&display=swap');
+
+
 * {
     box-sizing: border-box;
 }
+/* html {
+  cursor: url(https://i.imgur.com/u8xtUhp.png), auto;
+} */
+
+a
+{
+    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
 body {
    margin: 0; 
+   font-family: 'Noto Sans', sans-serif;
 }
 
     /* NAV STYLING */
 nav {
     position: sticky;
     top: 0px;
-    border-bottom: 5px solid black;
-    align-items: center;
+    border-bottom: 20px solid black;
     background-color:orange;
-    color:white;
+    color:black;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     padding: 0 1rem;
-    gap:2 rem;
-    align-items: stretch;
 }
 @media
 (prefers-reduced-motion: no-preference) {
@@ -40,7 +51,8 @@ nav a {
 }
 
 nav a:hover{
-  color:blueviolet;
+  color: white;
+  text-shadow: white 1px 0 10px;
 }
 
 nav img {
@@ -52,6 +64,50 @@ nav img {
     padding: .25rem;
     height: 300px;
 }
+
+    /* Inputs Styling */
+input[type=text] {
+  background-color: rgb(255, 168, 5, .2);
+  color: black;
+  font-size: 20px;
+  width: 250px;
+  height: 55px;
+  border-radius: 10px;
+  /* transition: width 0.4s ease-in-out; */
+}
+
+input::placeholder {
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  opacity: 0.5;
+  color: grey;
+}
+
+input[type=text]:focus {
+  border: 4px solid rgb(255, 153, 0);
+  background-color: rgb(223,56,33, .1);
+  /* width: 100%; */
+}
+
+input[type=button], input[type=submit], input[type=reset], button {
+  background-color: orange;
+  border-radius: 10px;
+  border: none;
+  font-size: 30px;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
+input[type=button]:hover, 
+input[type=submit]:hover, 
+input[type=reset]:hover, 
+button:hover {
+  background-color: rgb(246, 212, 150);
+}
+
 
     /* STORE PAGE STYLING */
 
@@ -69,6 +125,8 @@ nav img {
     height: 70px;
     align-items: initial;
 }
+
+/* SHOP PAGE STYLING */
 
 .shops {
     display: flex;
@@ -88,20 +146,59 @@ nav img {
 .shopInfo {
     margin-left: 15px;
     margin-top: 15px;
-    text-align: start;
+    text-align:left;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: medium;
+    font: bold;
+}
+
+.shopName {
+    font-size: xx-large;
+}
+.shopAddress {
+    color: rgb(146, 146, 146);
+    font-weight: bold;
+    font-size: medium;
 }
 
     /*   ANIMATION STYLING  */
 .regcontainer{
-  vertical-align: middle;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
 }
-.registerdiv{
+.registerForm{
+  position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
-  max-width: 200px;
-  align-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid black;
+  /* opacity: .8; */
+  border-radius: 10px;
+  width: 350px;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: white 1px 0 10px;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 50px;
 }
+
+/* .registerForm h1{
+  font-family: 'Anton', sans-serif;
+} */
+
+.animation{
+  z-index: -1;
+}
+
 .regform {
   display: flex;
   flex-direction: column;
@@ -161,37 +258,49 @@ nav img {
   position: relative;
   top: 65px;
   left: 0;
-  /* border: 1px solid #000000; */
 }
 
 #sliceleft {
   position: absolute;
   top: 0;
   left: 20px;
-  /* border: 1px solid #000000; */
 }
 #toppingbottom {
   position: absolute;
   top: 100px;
   left: 30px;
-  /* border: 1px solid #000000; */
 }
 
-img {
-    justify-content: center;
-    width: 50%;
-    }
 
- /* .menuItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height:100%;
-    width:50%;
-    align-content: center;
-    
+    /*        MENU PAGE STYLING      */
+/* Style the button that is used to open and close the collapsible content */
 
-  }*/
+.btnnull {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  content: '\02795';
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+.btn {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  content: "\2796";
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
 
   .menuItem {
     text-align: center;
@@ -209,22 +318,117 @@ img {
 
   }
   
-
-  .foodie {
-    
-    border:10px;
-    width:50%;
-    height:50%;
-  }
-
-  .menudes {
-height: 100%;
-  }
-
-  .prices {
-    align-items: center;
-    font-size: larger;
-
-  }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.btn:hover, .btnnull:hover {
+  background-color: orange;
+}
+/* content: '\02795';  Unicode character for "plus" sign (+) */
+/* content: "\2796";Unicode character for "minus" sign (-) */
 
 
+.btnnull:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+.btn:after {
+  content: "\2796"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+
+.menuCreateForm {
+  display: inline;
+  background-color: white;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: white 1px 0 10px;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+.menuCreateFormnull {
+  display: none;
+}
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-width: 5px;
+  border-color: rgb(203, 162, 17);
+  height: auto; 
+  width: auto; 
+  max-width: 900px; 
+  max-height: 900px;
+  border-radius: 10%;
+}
+.menuItemEdit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  width: auto; 
+  max-width: 900px; 
+  max-height: 900px;
+  border-radius: 10%;
+}
+.menuShowContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foodie {
+  border:10px;
+  width:50%;
+  height:50%;
+}
+
+.foodieEdit {
+  border:10px;
+  width:30%;
+  height:30%;
+}
+
+.menudes {
+  height: 100%;
+}
+
+.prices {
+  align-items: center;
+  font-size: larger;
+}
+
+            /* CART PAGE STYLING */
+.cartContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cartList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  width:300px;
+}
+.line {
+  width: 300px;
+  height: 0;
+  border: 1px solid #100202;
+  margin: 3px;
+  display:inline-block;
+}
+.cartHeader{
+  display: flex;
+  flex-direction: column;
+}

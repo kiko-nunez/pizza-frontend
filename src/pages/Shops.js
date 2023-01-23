@@ -10,11 +10,11 @@ function Shops (props) {
         <Link to={`/menu`}>
           <img className='shoplogo' src={shop.image} alt={shop.name}/>
         </Link>
-        <div className='shopInfo'>
-          <h1> {shop.name} </h1>
-          <h3> {shop.phone} </h3>
-          <h3> {shop.address} </h3>
-          </div>
+          <ul className='shopInfo'>
+          <li className='shopName'> {shop.name} </li>
+          <li> {shop.phone} </li>
+          <li className='shopAddress'> {shop.address} </li>
+          </ul>
       </div>
     ))
   }
