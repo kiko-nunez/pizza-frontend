@@ -128,19 +128,20 @@ button:hover {
 
 /* SHOP PAGE STYLING */
 
+
 .shops {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     border: solid;
     border-width: 10px;
     border-color: black;
+    /* padding-left: 250px; */
 }
 
 .shoplogo {
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 200px;
+    height: 200px; 
+    width: 200px;
 }
 
 .shopInfo {

@@ -6,6 +6,7 @@ function Shops (props) {
 
   const loaded = () => {
     return props.shops.map(shop => (
+      <div className='shopsIndex'>
       <div className='shops' key={shop._id}>
         <Link to={`/menu`}>
           <img className='shoplogo' src={shop.image} alt={shop.name}/>
@@ -15,6 +16,7 @@ function Shops (props) {
           <li> {shop.phone} </li>
           <li className='shopAddress'> {shop.address} </li>
           </ul>
+      </div>
       </div>
     ))
   }
