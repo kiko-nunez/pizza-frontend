@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import Cheese from "../images/cheese.png"
+import Slice from "../images/slice.png"
+import Toppings from "../images/toppings.png"
 
 function Register(props) {
   const formFields = {
@@ -22,25 +25,12 @@ function Register(props) {
     setNewUser(formFields);
   };
 
-  
-  // const loaded = () => {
-  //   return props.user.map(users => (
-  //     <div key={users._id} className="userItem">
-  //             <h1>{users.name}</h1>
-  //             <h3>{users.address}</h3>
-  //             <h2>{users.phone}</h2>
-  //     </div>
-  //   ));
-  // };
-  
-  // const loading = () => {
-  //   return <h1>Kneeding the Doughs...</h1>;
-  // };
-
   return (
-      <section>
+    <>
+    <div className='regcontainer'>
+      <div className='registerdiv'>
         <h1>Register User</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="regform">
             Name: 
                 <input
                   type="text"
@@ -68,7 +58,19 @@ function Register(props) {
                 <input className='register' type="submit" value="Register User"/>
             </form>
             {/* { props.people ? loaded() : loading() } */}
-      </section>
+      </div>
+      <div className='animationText'>
+        <div className='parent'>
+          <img src={Slice} alt="slice" className='leftside' id="sliceleft"/>
+          <img src={Cheese} alt="cheese" className='rightside' id="cheeseright"/>
+          <img src={Toppings} alt="toppings" className='bottom' id="toppingbottom"/>
+        </div>
+        {/* <h1 className='rightside'>Slice</h1>
+        <h1 className='leftside'>Toppings</h1>
+        <h1 className='bottom'>Cheese</h1> */}
+      </div>
+    </div>
+    </>
     );
     
   }
