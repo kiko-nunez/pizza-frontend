@@ -128,7 +128,6 @@ button:hover {
 
 /* SHOP PAGE STYLING */
 
-
 .shops {
     display: flex;
     justify-content: flex-start;
@@ -316,16 +315,14 @@ button:hover {
     max-width: 900px; 
     max-height: 900px;
     border-radius: 10%;
-
   }
-  
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .btn:hover, .btnnull:hover {
   background-color: orange;
 }
 /* content: '\02795';  Unicode character for "plus" sign (+) */
 /* content: "\2796";Unicode character for "minus" sign (-) */
-
 
 .btnnull:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
@@ -433,3 +430,35 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+
+/* Checkout */
+
+.payment {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  input[type=number] {
+    background-color: rgb(255, 168, 5, .2);
+    color: black;
+    font-size: 20px;
+    width: 250px;
+    height: 55px;
+    border-radius: 10px;
+  }
+
+  .cHeader{
+    display: flex;
+    justify-content: center;
+  }
+
+  .order {
+    display: flex;
+    justify-content: end;
+  }
+
