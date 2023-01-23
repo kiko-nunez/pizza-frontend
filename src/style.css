@@ -1,78 +1,132 @@
+/* IMPORTED FONTS FROM GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chivo+Mono:wght@100;200&family=Kanit:wght@200;300&family=Noto+Sans:wght@200;300;400&display=swap');
+
+
 * {
     box-sizing: border-box;
 }
-body {
-   margin: 0; 
-}
-.nav{
-    background-color:orange;
-    color:white;
-    display: flex;
-    justify-content:space-between ;
-    align-items: center;
-    padding: 0 1rem;
-    gap:2 rem;
-    align-items: stretch;
+/* html {
+  cursor: url(https://i.imgur.com/u8xtUhp.png), auto;
+} */
+
+a
+{
+    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
 
+body {
+   margin: 0; 
+   font-family: 'Noto Sans', sans-serif;
+}
+
+    /* NAV STYLING */
+nav {
+    position: sticky;
+    top: 0px;
+    border-bottom: 20px solid black;
+    background-color:orange;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+}
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 .site-title {
     font-size: 2rem;
     
 }
-.nav ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    padding: .25rem;
+    font-size: 30px;
 }
-.nav a {
+
+nav a:hover{
+  color: white;
+  text-shadow: white 1px 0 10px;
+}
+
+nav img {
     color: inherit;
     text-decoration: none;
     height: 100%;
     display:flex ;
     align-items: center;
     padding: .25rem;
-
+    height: 300px;
 }
 
-.nav li.active{
-background-color: blueviolet;
+    /* Inputs Styling */
+input[type=text] {
+  background-color: rgb(255, 168, 5, .2);
+  color: black;
+  font-size: 20px;
+  width: 250px;
+  height: 55px;
+  border-radius: 10px;
+  /* transition: width 0.4s ease-in-out; */
 }
 
-.nav li-hover{
-    background-color: rgb(139, 105, 171);
+input::placeholder {
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  opacity: 0.5;
+  color: grey;
 }
 
-.nav img {
-    color: inherit;
-    text-decoration: none;
-    height: 100%;
-    display:flex ;
-    align-items: center;
-    padding: .25rem;
-    height: 80px;
+input[type=text]:focus {
+  border: 4px solid rgb(255, 153, 0);
+  background-color: rgb(223,56,33, .1);
+  /* width: 100%; */
 }
+
+input[type=button], input[type=submit], input[type=reset], button {
+  background-color: orange;
+  border-radius: 10px;
+  border: none;
+  font-size: 30px;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
+input[type=button]:hover, 
+input[type=submit]:hover, 
+input[type=reset]:hover, 
+button:hover {
+  background-color: rgb(246, 212, 150);
+}
+
+
+    /* STORE PAGE STYLING */
 
 .storeInfo {
     display:flex;
     flex-direction: column;
     gap: 5rem;
     border: 10px;
-
-
 }
 
 .store {
     border:5px solid rgb(150, 147, 143);
-
-
 }
 .image{
     height: 70px;
     align-items: initial;
-
 }
+
+/* SHOP PAGE STYLING */
 
 .shops {
     display: flex;
@@ -92,5 +146,304 @@ background-color: blueviolet;
 .shopInfo {
     margin-left: 15px;
     margin-top: 15px;
-    text-align: start;
+    text-align:left;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: medium;
+    font: bold;
 }
+
+.shopName {
+    font-size: xx-large;
+}
+.shopAddress {
+    color: rgb(146, 146, 146);
+    font-weight: bold;
+    font-size: medium;
+}
+
+    /*   ANIMATION STYLING  */
+.regcontainer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.registerForm{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid black;
+  /* opacity: .8; */
+  border-radius: 10px;
+  width: 350px;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: white 1px 0 10px;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+
+/* .registerForm h1{
+  font-family: 'Anton', sans-serif;
+} */
+
+.animation{
+  z-index: -1;
+}
+
+.regform {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.leftside {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.rightside {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes Slide_Up {
+  0% {
+    transform: translateY(250px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bottom {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 Slide_Up;
+}
+
+/* animation images */
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#cheeseright {
+  position: relative;
+  top: 65px;
+  left: 0;
+}
+
+#sliceleft {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+#toppingbottom {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+
+    /*        MENU PAGE STYLING      */
+/* Style the button that is used to open and close the collapsible content */
+
+.btnnull {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  content: '\02795';
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+.btn {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  content: "\2796";
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.btn:hover, .btnnull:hover {
+  background-color: orange;
+}
+/* content: '\02795';  Unicode character for "plus" sign (+) */
+/* content: "\2796";Unicode character for "minus" sign (-) */
+
+.btnnull:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+.btn:after {
+  content: "\2796"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+
+.menuCreateForm {
+  display: inline;
+  background-color: white;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: white 1px 0 10px;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+.menuCreateFormnull {
+  display: none;
+}
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-width: 5px;
+  border-color: rgb(203, 162, 17);
+  height: auto; 
+  width: auto; 
+  max-width: 900px; 
+  max-height: 900px;
+  border-radius: 10%;
+}
+.menuItemEdit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  width: auto; 
+  max-width: 900px; 
+  max-height: 900px;
+  border-radius: 10%;
+}
+.menuShowContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foodie {
+  border:10px;
+  width:50%;
+  height:50%;
+}
+
+.foodieEdit {
+  border:10px;
+  width:30%;
+  height:30%;
+}
+
+.menudes {
+  height: 100%;
+}
+
+.prices {
+  align-items: center;
+  font-size: larger;
+}
+
+            /* CART PAGE STYLING */
+.cartContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cartList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  width:300px;
+}
+.line {
+  width: 300px;
+  height: 0;
+  border: 1px solid #100202;
+  margin: 3px;
+  display:inline-block;
+}
+.cartHeader{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Checkout */
+
+.payment {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  input[type=number] {
+    background-color: rgb(255, 168, 5, .2);
+    color: black;
+    font-size: 20px;
+    width: 250px;
+    height: 55px;
+    border-radius: 10px;
+  }
+
+  .cHeader{
+    display: flex;
+    justify-content: center;
+  }
+
+  .order {
+    display: flex;
+    justify-content: end;
+  }
