@@ -23,7 +23,7 @@ body {
 nav {
     position: sticky;
     top: 0px;
-    border-bottom: 20px solid black;
+    border-bottom: 8px solid black;
     background-color:orange;
     color:black;
     display: flex;
@@ -42,17 +42,19 @@ nav {
     
 }
 
-nav a {
+nav h2 {
     color: inherit;
     text-decoration: none;
     height: 100%;
     padding: .25rem;
     font-size: 30px;
+    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
 
-nav a:hover{
+nav h2:hover{
   color: white;
   text-shadow: white 1px 0 10px;
+  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
 
 nav img {
@@ -61,8 +63,9 @@ nav img {
     height: 100%;
     display:flex ;
     align-items: center;
-    padding: .25rem;
-    height: 300px;
+    /* padding: .25rem; */
+    height: 220px;
+    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
 
     /* Inputs Styling */
@@ -170,7 +173,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .registerForm{
   position: absolute;
@@ -181,19 +184,14 @@ button:hover {
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid black;
-  /* opacity: .8; */
   border-radius: 10px;
-  width: 350px;
+  width: 260px;
   font-family: 'Noto Sans', sans-serif;
   text-shadow: white 1px 0 10px;
   color: black;
-  font-size: 25px;
-  padding-bottom: 50px;
+  font-size: 20px;
+  padding-bottom: 10px;
 }
-
-/* .registerForm h1{
-  font-family: 'Anton', sans-serif;
-} */
 
 .animation{
   z-index: -1;
@@ -201,9 +199,10 @@ button:hover {
 
 .regform {
   display: flex;
+  font-size: 18px;
   flex-direction: column;
   gap: 5px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 @keyframes slideInFromLeft {
@@ -216,6 +215,7 @@ button:hover {
 }
 
 .leftside {  
+  /* width: 80%; */
   /* This section calls the slideInFromLeft animation we defined above */
   animation: 2s ease-out 0s 1 slideInFromLeft;
 }
@@ -230,6 +230,7 @@ button:hover {
 }
 
 .rightside {  
+  /* width: 80%; */
   /* This section calls the slideInFromLeft animation we defined above */
   animation: 2s ease-out 0s 1 slideInFromRight;
 }
@@ -244,6 +245,7 @@ button:hover {
 }
 
 .bottom {  
+  /* width: 80%; */
   /* This section calls the slideInFromLeft animation we defined above */
   animation: 2s ease-out 0s 1 Slide_Up;
 }
@@ -302,83 +304,88 @@ button:hover {
   cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
 
-  .menuItem {
+  /* .menuItem {
     text-align: center;
     display: block;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    width: 70%;
+    width: 300px;
     border: solid;
     border-width: 5px;
     border-color: rgb(203, 162, 17);
     max-width: 900px; 
     max-height: 900px;
     border-radius: 10%;
+  } */ 
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .btn:hover, .btnnull:hover {
+    background-color: orange;
   }
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.btn:hover, .btnnull:hover {
-  background-color: orange;
-}
-/* content: '\02795';  Unicode character for "plus" sign (+) */
-/* content: "\2796";Unicode character for "minus" sign (-) */
-
-.btnnull:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: black;
-  float: right;
-  margin-left: 5px;
-}
-.btn:after {
-  content: "\2796"; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: black;
-  float: right;
-  margin-left: 5px;
-  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-
-.menuCreateForm {
-  display: inline;
-  background-color: white;
-  font-family: 'Noto Sans', sans-serif;
-  text-shadow: white 1px 0 10px;
-  color: black;
-  font-size: 25px;
-  padding-bottom: 50px;
-}
-.menuCreateFormnull {
-  display: none;
-}
-.menuItem {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: solid;
-  border-width: 5px;
-  border-color: rgb(203, 162, 17);
-  height: auto; 
-  width: auto; 
-  max-width: 900px; 
-  max-height: 900px;
-  border-radius: 10%;
-}
-.menuItemEdit {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto; 
-  width: auto; 
-  max-width: 900px; 
-  max-height: 900px;
-  border-radius: 10%;
-}
+  /* content: '\02795';  Unicode character for "plus" sign (+) */
+  /* content: "\2796";Unicode character for "minus" sign (-) */
+  
+  .btnnull:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+  }
+  .btn:after {
+    content: "\2796"; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  
+  .menuCreateForm {
+    display: inline;
+    background-color: white;
+    font-family: 'Noto Sans', sans-serif;
+    text-shadow: white 1px 0 10px;
+    color: black;
+    font-size: 25px;
+    padding-bottom: 50px;
+  }
+  .menuCreateFormnull {
+    display: none;
+  }
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 5px;
+    border-color: rgb(203, 162, 17);
+    height: auto; 
+    width: auto; 
+    max-width: 900px; 
+    max-height: 900px;
+    border-radius: 10%;
+  }
+  .menuItemEdit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    width: auto; 
+    max-width: 900px; 
+    max-height: 900px;
+    border-radius: 10%;
+  }
+  .menuItem img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    overflow: hidden;
+  }
 .menuShowContainer{
   display: flex;
   flex-wrap: wrap;
@@ -459,6 +466,200 @@ button:hover {
 
   .order {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
+        /* Media Query */
+          /* For Mobile */
+
+@media (max-width: 43.75em) { /* 700px viewport width for mobile*/
+  nav {
+    position: sticky;
+    /* top: 0px; */
+    border-bottom: 10px solid black;
+    background-color:orange;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+            "image login"
+            "image shops"
+            "image cart"
+            "image checkout";
+    grid-gap: 0px 60px;
+  }
+  nav h2{
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  .navLogin {
+    padding-top: 2rem;
+    grid-area: login;
+    
+  }
+  .navShops {
+    grid-area: shops;
+  }
+  .navImage {
+    grid-area: image;
+  }
+  .navCart {
+    grid-area: cart;
+  }
+  .navCheckout {
+    grid-area: checkout;
+  }
+  /* Menu Styling */
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px rgb(255, 166, 2, .5);
+    height: 400px; 
+    width: 300px; 
+    border-radius: 1rem;
+  }
+  .menuItemEdit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    width: auto; 
+    max-width: 900px; 
+    max-height: 900px;
+    border-radius: 10%;
+  }
+  .menuShowContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuItem img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+    /*   ANIMATION STYLING  */
+.regcontainer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.registerForm{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 250px;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: white 1px 0 10px;
+  color: black;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+.registerh3{
+  display: none;
+}
+
+.animation{
+  z-index: -1;
+}
+
+.regform {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.leftside {  
+  width: 70%;
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.rightside {  
+  width: 70%;
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes Slide_Up {
+  0% {
+    transform: translateY(250px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bottom {  
+  width: 60%;
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 Slide_Up;
+}
+
+/* animation images */
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#cheeseright {
+  position: relative;
+  top: 44px;
+  left: 8px;
+}
+
+#sliceleft {
+  position: absolute;
+  top: 0;
+  left: 60px;
+}
+#toppingbottom {
+  position: absolute;
+  top: 60px;
+  left: 25px;
+}
+.shops {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid;
+  border-width: 5px;
+  border-color: black;
+}
+}
+  
+  

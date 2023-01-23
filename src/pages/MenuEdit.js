@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
+import "../menustyles.css";
 
 // useParams is a hook that gives us access to the url params 
 // to allow us to find from the url params 
@@ -7,6 +8,19 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 // useNavigate programaticly nagivates user based on some condition
 
 function MenuEdit(props) {
+
+     // This section is for the collapsible create form
+
+    // https://www.youtube.com/watch?v=xysDXNYWbKw&t=1s&ab_channel=WebStylePress
+    const [btnState, setBtnState] = useState(false);
+  
+    const handleClick = () => {
+    setBtnState(btnState => !btnState);
+    };
+
+    let toggleClassCheck = btnState ? ' active': null;
+
+
     // we need to access the id from the url params
     const { id } = useParams();
     const navigate = useNavigate();
@@ -42,10 +56,8 @@ function MenuEdit(props) {
     const loaded = () => {
         return (
             <div className="menuItemEdit">
-                <div className="itemDisplay">
-                    <h1 className="menuItem">{menus.item}</h1>
-                <div className="menuEditForm">
-                <form onSubmit={handleSubmit}>
+                <button type="button" className={`btn${toggleClassCheck}`} onClick={handleClick}>Edit Menu Item</button>
+                <form onSubmit={handleSubmit} className={`menuCreateForm${toggleClassCheck}`}>
                     <input 
                         type="text" 
                         name="item" 
@@ -76,15 +88,14 @@ function MenuEdit(props) {
                     />
                     <input type="submit" value="Edit Menu Item" />
                 </form>
+                    <h1 className="menuItem">{menus.item}</h1>
                     <img className="foodieEdit" src={menus.image} alt={menus.name}/>
                     <h3 className="menudes">{menus.description}</h3>
                     <h2 className="price">{menus.price}</h2>
-                </div>
                 <button onClick={handleDelete}>Delete This Item</button>
                 <Link to={`/menu`}>
                     <button>Back to Menu</button>
                 </Link>
-                </div>
             </div>
         );
     };

@@ -56,7 +56,7 @@ function MenuShow(props) {
                     <Link to={`/menu/${menus._id}`}>
                         <h1>{menus.item}</h1>
                     </Link>
-                        <div className="menudes">{menus.description}</div>
+                        <span className="menudes">{menus.description}</span>
                         <div className="price">{menus.price}</div>
                     <input type="hidden" name="menuItem" value={menus._id} />
                     <Link to={'/cart'}>
