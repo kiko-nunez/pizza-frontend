@@ -3,6 +3,8 @@
 ***
 ## Description
 CheesUs is a food delivery app specifically designed to give customers a list of pizza shops to chose from near by. The app is a paired down version of other food delivery apps, giving pizza shops a leg into to the online delivery market without having to use the GIANTS in the industry.
+
+This is a forked branch that I will be working on for portolio purposes.
 ***
 ## Contributors 
 * Product Manager: [Christen DeThomas](https://github.com/christendd)
@@ -38,7 +40,7 @@ CheesUs is a food delivery app specifically designed to give customers a list of
 ***
 ### Production version
 
-![production](https://i.imgur.com/nUFNM9a.png)
+![production](../pizza-frontend/src/images/production.png)
 ***
 ## Deployed Website
 
