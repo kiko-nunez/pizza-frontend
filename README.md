@@ -38,7 +38,7 @@ CheesUs is a food delivery app specifically designed to give customers a list of
 ***
 ### Production version
 
-![production](https://i.imgur.com/nUFNM9a.png)
+![production](/src/images/production.png)
 ***
 ## Deployed Website
 
