@@ -6,9 +6,10 @@ import Register from "../pages/Register";
 import Shops from "../pages/Shops";
 import MenuEdit from '../pages/MenuEdit';
 import MenuShow from '../pages/MenuShow';
-import { API_URLS } from '../url';
+import { API_URLS } from '../url.js';
 
 
+// console.log(API_URLS);
 
 const Main = () => {
 
@@ -19,6 +20,7 @@ const Main = () => {
   
       const response = await fetch(API_URLS.SHOP)
       const data = await response.json()
+      // console.log(response);
       // console.log(data);
       setShops(data)
     }
@@ -174,6 +176,8 @@ const Main = () => {
                                                 menu={menu}
                                                 deleteMenu={deleteMenu}
                                                 updateMenu={updateMenu}
+                                                
+                                                
          />}/>
   
       </Routes>
