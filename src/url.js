@@ -1,5 +1,5 @@
 // This can be read from an env file
-const BASE_URL = 'https://cheesus.herokuapp.com/'
+const BASE_URL = 'pizza-backend-production-feff.up.railway.app'
 //const BASE_URL = "http://localhost:4000/" 
 
 export const API_URLS = {
