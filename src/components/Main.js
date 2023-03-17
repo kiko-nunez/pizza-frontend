@@ -6,7 +6,7 @@ import Register from "../pages/Register";
 import Shops from "../pages/Shops";
 import MenuEdit from '../pages/MenuEdit';
 import MenuShow from '../pages/MenuShow';
-import { API_URLS } from '../Url';
+import { API_URLS } from '../url';
 
 
 const Main = () => {
