@@ -6,18 +6,17 @@ import Register from "../pages/Register";
 import Shops from "../pages/Shops";
 import MenuEdit from '../pages/MenuEdit';
 import MenuShow from '../pages/MenuShow';
+import { API_URLS } from '../Url';
+
 
 const Main = () => {
 
     const [shops, setShops] = useState(null)
   
-    // const URL = 'http://localhost:4000/shop'
-    const URL = 'https://cheesus.herokuapp.com/shop/'
-  
-  
+   // SHOP CALL
     const getShops = async () => {
   
-      const response = await fetch(URL)
+      const response = await fetch(API_URLS.SHOP)
       const data = await response.json()
       // console.log(data);
       setShops(data)
@@ -28,19 +27,16 @@ const Main = () => {
       }, [])
 
       // USER Call
-      // const USER_URL = "http://localhost:4000/user/" 
-      const USER_URL = "https://cheesus.herokuapp.com/user/" 
-  
       const [ user, setUser ] = useState(null);
 
       const getUser = async () => {
-        const resU = await fetch(USER_URL);
+        const resU = await fetch(API_URLS.USER);
         const dU = await resU.json();
         setUser(dU);
       }
     
       const createUser = async (users) => {
-        await fetch(USER_URL, {
+        await fetch(API_URLS.USER, {
           method: "POST",
           headers: {
             "Content-type": "Application/json",
@@ -77,23 +73,16 @@ const Main = () => {
       }, []);
 
       // MENU Call
-
-
-      //const MENU_URL = "http://localhost:4000/menu/" 
-      const MENU_URL = "https://cheesus.herokuapp.com/menu/" 
-
-    
-
   
       const [ menu, setMenu ] = useState(null);
       const getMenu = async () => {
-        const res = await fetch(MENU_URL);
+        const res = await fetch(API_URLS.MENU);
         const d = await res.json();
         setMenu(d);
       }
     
       const createMenu = async (menus) => {
-        await fetch(MENU_URL, {
+        await fetch(API_URLS.MENU, {
           method: "POST",
           headers: {
             "Content-type": "Application/json",
@@ -104,7 +93,7 @@ const Main = () => {
       };
     
       const updateMenu = async (id, updatedMenus) => {
-        await fetch(MENU_URL + id, {
+        await fetch(API_URLS.MENU + id, {
           method: "PUT",
           headers: {
             "Content-type": "Application/json",
@@ -115,7 +104,7 @@ const Main = () => {
       };
     
       const deleteMenu = async (id) => {
-        await fetch(MENU_URL + id, {
+        await fetch(API_URLS.MENU + id, {
           method: "DELETE",
         });
         getMenu();
@@ -125,21 +114,17 @@ const Main = () => {
         getMenu();
       }, []);
 
-
-
-      // Cart Ajax Call
-      //const CART_URL = "http://localhost:4000/menu/" 
-      const CART_URL = "https://cheesus.herokuapp.com/cart/" 
+      // Cart Call
 
       const [ cart, setCart ] = useState(null);
       const getCart = async () => {
-        const resCart = await fetch(CART_URL);
+        const resCart = await fetch(API_URLS.CART);
         const dataCart = await resCart.json();
         setCart(dataCart);
       }
     
       const createCart = async (carts) => {
-        await fetch(CART_URL, {
+        await fetch(API_URLS.CART, {
           method: "POST",
           headers: {
             "Content-type": "Application/json",
@@ -150,7 +135,7 @@ const Main = () => {
       };
     
       const updateCart = async (id, updatedCarts) => {
-        await fetch(CART_URL + id, {
+        await fetch(API_URLS.CART + id, {
           method: "PUT",
           headers: {
             "Content-type": "Application/json",
@@ -161,7 +146,7 @@ const Main = () => {
       };
     
       const deleteCart = async (id) => {
-        await fetch(CART_URL + id, {
+        await fetch(API_URLS.CART + id, {
           method: "DELETE",
         });
         getCart();
