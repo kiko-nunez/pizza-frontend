@@ -9,10 +9,10 @@
   cursor: url(https://i.imgur.com/u8xtUhp.png), auto;
 } */
 
-a
+/* a
 {
     cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
-}
+} */
 
 body {
    margin: 0; 
@@ -48,13 +48,13 @@ nav h2 {
     height: 100%;
     padding: .25rem;
     font-size: 30px;
-    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+    /* cursor: url(https://i.imgur.com/q2sjQNw.png), auto; */
 }
 
 nav h2:hover{
   color: white;
   text-shadow: white 1px 0 10px;
-  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+  /* cursor: url(https://i.imgur.com/q2sjQNw.png), auto; */
 }
 
 nav img {
@@ -65,7 +65,7 @@ nav img {
     align-items: center;
     /* padding: .25rem; */
     height: 220px;
-    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+    /* cursor: url(https://i.imgur.com/q2sjQNw.png), auto; */
 }
 
     /* Inputs Styling */
@@ -101,7 +101,7 @@ input[type=button], input[type=submit], input[type=reset], button {
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
-  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+  /* cursor: url(https://i.imgur.com/q2sjQNw.png), auto; */
 }
 
 input[type=button]:hover, 
@@ -166,6 +166,32 @@ button:hover {
     font-weight: bold;
     font-size: medium;
 }
+    /*   Landing Page  */
+    .searchWrapper{
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 2px solid black;
+      border-radius: 10px;
+      width:800px;
+      font-family: 'Noto Sans', sans-serif;
+      text-shadow: white 1px 0 10px;
+      color: black;
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+    .searchBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 18px;
+      gap: 5px;
+    }
+
 
     /*   ANIMATION STYLING  */
 .regcontainer{
@@ -288,7 +314,7 @@ button:hover {
   outline: none;
   font-size: 15px;
   content: '\02795';
-  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+  /* cursor: url(https://i.imgur.com/q2sjQNw.png), auto; */
 }
 .btn {
   background-color: #eee;
@@ -301,7 +327,7 @@ button:hover {
   outline: none;
   font-size: 15px;
   content: "\2796";
-  cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+  /* cursor: url(https://i.imgur.com/q2sjQNw.png), auto; */
 }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -324,7 +350,7 @@ button:hover {
     color: black;
     float: right;
     margin-left: 5px;
-    cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
+    /* cursor: url(https://i.imgur.com/q2sjQNw.png), auto; */
   }
   
   /* Style the collapsible content. Note: hidden by default */

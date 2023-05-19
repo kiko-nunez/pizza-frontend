@@ -6,26 +6,18 @@ function Landing() {
     return (
         <>
             <div className='regcontainer'>
-                <div className='registerForm'>
-                    <h3 className='registerh3'>Register User</h3>
-                    <form className="regform">
-                    Name: 
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder='Mr. Cheezus'
-                        />
-                    Street Address: 
+                <div className='searchWrapper'>
+                    <h3 className='registerh3'>Search for Pizza</h3>
+                    <form className="searchBar">
+                        <select id="options" name="options" className="optionsBtn btn">
+                            <option value="Delivery">Delivery</option>
+                            <option value="Pickup">Pickup</option>
+                        </select>  
+                        <label htmlFor="address">Street Address: </label>
                         <input
                             type="text"
                             name="address"
                             placeholder='123 Main St'
-                        />
-                    Phone Number: 
-                        <input
-                            type="text"
-                            name="phone"
-                            placeholder='1(800)-CHEEZUS'
                         />
                         <input className='register' type="submit" value="Register User"/>
                     </form>
