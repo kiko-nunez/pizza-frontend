@@ -27,49 +27,46 @@ function Register(props) {
 
   return (
     <>
-    <div className='regcontainer'>
-      <div className='registerForm'>
-        <h3 className='registerh3'>Register User</h3>
-            <form onSubmit={handleSubmit} className="regform">
-            Name: 
-                <input
-                  type="text"
-                  name="name"
-                  onChange={handleChange}
-                  value={newUser.name}
-                  placeholder='Mr. Cheezus'
-                />
-            Street Address: 
-                <input
-                  type="text"
-                  name="address"
-                  onChange={handleChange}
-                  value={newUser.address}
-                  placeholder='123 Main St'
-                />
-            Phone Number: 
-                <input
-                  type="text"
-                  name="phone"
-                  onChange={handleChange}
-                  value={newUser.phone}
-                  placeholder='1(800)-CHEEZUS'
-                />
-                <input className='register' type="submit" value="Register User"/>
-            </form>
-            {/* { props.people ? loaded() : loading() } */}
-      </div>
-      <div className='animation'>
-        <div className='parent'>
-          <img src={Slice} alt="slice" className='leftside' id="sliceleft"/>
-          <img src={Cheese} alt="cheese" className='rightside' id="cheeseright"/>
-          <img src={Toppings} alt="toppings" className='bottom' id="toppingbottom"/>
+      <div className='regcontainer'>
+        <div className='registerForm'>
+          <h3 className='registerh3'>Register User</h3>
+              <form onSubmit={handleSubmit} className="regform">
+              Name: 
+                  <input
+                    type="text"
+                    name="name"
+                    onChange={handleChange}
+                    value={newUser.name}
+                    placeholder='Mr. Cheezus'
+                  />
+              Street Address: 
+                  <input
+                    type="text"
+                    name="address"
+                    onChange={handleChange}
+                    value={newUser.address}
+                    placeholder='123 Main St'
+                  />
+              Phone Number: 
+                  <input
+                    type="text"
+                    name="phone"
+                    onChange={handleChange}
+                    value={newUser.phone}
+                    placeholder='1(800)-CHEEZUS'
+                  />
+                  <input className='register' type="submit" value="Register User"/>
+              </form>
+              {/* { props.people ? loaded() : loading() } */}
         </div>
-        {/* <h1 className='rightside'>Slice</h1>
-        <h1 className='leftside'>Toppings</h1>
-        <h1 className='bottom'>Cheese</h1> */}
+        <div className='animation'>
+          <div className='parent'>
+            <img src={Slice} alt="slice" className='leftside' id="sliceleft"/>
+            <img src={Cheese} alt="cheese" className='rightside' id="cheeseright"/>
+            <img src={Toppings} alt="toppings" className='bottom' id="toppingbottom"/>
+          </div>
+        </div>
       </div>
-    </div>
     </>
     );
     

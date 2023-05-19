@@ -10,3 +10,5 @@ export const API_URLS = {
     CART: BASE_URL + '/cart',
     MENU: BASE_URL + '/menu',
 }
+// console.log('this is suppose to be a url ' + BASE_URL)
+// console.log('env ' + process.env.REACT_APP_BASE_URL)

@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import Shops from "../pages/Shops";
 import MenuEdit from '../pages/MenuEdit';
 import MenuShow from '../pages/MenuShow';
+import Landing from '../pages/Landing';
 import { API_URLS } from '../url.js';
 
 
@@ -163,22 +164,13 @@ const Main = () => {
     return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Register 
-                                        user={user}
-                                        createUser={createUser}
-                                      />} 
-        />
-        <Route path= "/cart" element={<Cart menu={menu} cart={cart} deleteCart={deleteCart} updateCart={updateCart}/>} />
+        <Route exact path="/" element={<Landing/>} />
         <Route path= "/checkout" element={<Checkout />} />
-        <Route path= "/shops" element={<Shops shops={shops} />} />
+        <Route path= "/shops" element={<Shops shops={shops}/>}/>
+        <Route exact path="/register" element={<Register user={user} createUser={createUser}/>}/>
+        <Route path= "/cart" element={<Cart menu={menu} cart={cart} deleteCart={deleteCart} updateCart={updateCart}/>}/>
         <Route path="/menu" element={<MenuShow menu={menu} createMenu={createMenu} createCart={createCart} cart={cart}/>}/>
-        <Route path="/menu/:id" element={<MenuEdit
-                                                menu={menu}
-                                                deleteMenu={deleteMenu}
-                                                updateMenu={updateMenu}
-                                                
-                                                
-         />}/>
+        <Route path="/menu/:id" element={<MenuEdit menu={menu} deleteMenu={deleteMenu} updateMenu={updateMenu}/>}/>
   
       </Routes>
   
