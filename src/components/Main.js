@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import Shops from "../pages/Shops";
 import MenuEdit from '../pages/MenuEdit';
 import MenuShow from '../pages/MenuShow';
+import Landing from '../pages/Landing';
 import { API_URLS } from '../url.js';
 
 
@@ -163,7 +164,8 @@ const Main = () => {
     return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Register 
+        <Route exact path="/" element={<Landing/>} />
+        <Route exact path="/register" element={<Register 
                                         user={user}
                                         createUser={createUser}
                                       />} 

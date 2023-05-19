@@ -12,7 +12,7 @@ import TransparentText from "../images/cheezus_logo-removebg-preview.png"
         navigate('/shops');
     };
     const loginClick = () => {
-        navigate('/');
+        navigate('/register');
     };
     const cartClick = () => {
         navigate('/cart');

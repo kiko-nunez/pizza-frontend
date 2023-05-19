@@ -303,20 +303,6 @@ button:hover {
   content: "\2796";
   cursor: url(https://i.imgur.com/q2sjQNw.png), auto;
 }
-
-  /* .menuItem {
-    text-align: center;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    border: solid;
-    border-width: 5px;
-    border-color: rgb(203, 162, 17);
-    max-width: 900px; 
-    max-height: 900px;
-    border-radius: 10%;
-  } */ 
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .btn:hover, .btnnull:hover {
